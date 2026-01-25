@@ -1,3 +1,10 @@
+/**
+ * This file is part of Telegram Bot API Docs (unofficial).
+ * Author: Ankit Chaubey
+ * GitHub: https://github.com/ankit-chaubey
+ * Project: https://github.com/tgapis/botapidocs
+ */
+
 import { METHODS, META } from "./data.js";
 
 const menu = document.getElementById("menu");
