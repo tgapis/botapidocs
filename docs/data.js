@@ -45,7 +45,7 @@ export const METHODS = [
       "timeout": 123456789,
       "allowed_updates": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getUpdates \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUpdates\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setWebhook",
@@ -108,7 +108,7 @@ export const METHODS = [
       "drop_pending_updates": false,
       "secret_token": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setWebhook \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"url\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setWebhook\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"url\": \"example\"\n}'"
   },
   {
     "name": "deleteWebhook",
@@ -127,7 +127,7 @@ export const METHODS = [
     "jsonFull": {
       "drop_pending_updates": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteWebhook \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteWebhook\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getWebhookInfo",
@@ -137,7 +137,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getWebhookInfo \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getWebhookInfo\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMe",
@@ -147,7 +147,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMe \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMe\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "logOut",
@@ -157,7 +157,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/logOut \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/logOut\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "close",
@@ -167,7 +167,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/close \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/close\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "sendMessage",
@@ -287,7 +287,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"text\": \"example\"\n}'"
   },
   {
     "name": "forwardMessage",
@@ -373,7 +373,7 @@ export const METHODS = [
       "suggested_post_parameters": {},
       "message_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/forwardMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/forwardMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "forwardMessages",
@@ -438,7 +438,7 @@ export const METHODS = [
       "disable_notification": false,
       "protect_content": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/forwardMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_ids\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/forwardMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_ids\": []\n}'"
   },
   {
     "name": "copyMessage",
@@ -573,7 +573,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/copyMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/copyMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "copyMessages",
@@ -645,7 +645,7 @@ export const METHODS = [
       "protect_content": false,
       "remove_caption": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/copyMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_ids\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/copyMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"from_chat_id\": 123456789,\n  \"message_ids\": []\n}'"
   },
   {
     "name": "sendPhoto",
@@ -779,7 +779,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendPhoto \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendAudio",
@@ -927,7 +927,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendAudio \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"audio\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAudio\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"audio\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendDocument",
@@ -1061,7 +1061,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendDocument \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"document\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendDocument\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"document\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVideo",
@@ -1244,7 +1244,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendVideo \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideo\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendAnimation",
@@ -1406,7 +1406,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendAnimation \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"animation\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAnimation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"animation\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVoice",
@@ -1533,7 +1533,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendVoice \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"voice\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVoice\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"voice\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVideoNote",
@@ -1653,7 +1653,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendVideoNote \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video_note\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideoNote\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video_note\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendPaidMedia",
@@ -1788,7 +1788,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendPaidMedia \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"star_count\": 123456789,\n  \"media\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPaidMedia\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"star_count\": 123456789,\n  \"media\": []\n}'"
   },
   {
     "name": "sendMediaGroup",
@@ -1873,7 +1873,7 @@ export const METHODS = [
       "message_effect_id": "example",
       "reply_parameters": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendMediaGroup \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"media\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMediaGroup\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"media\": []\n}'"
   },
   {
     "name": "sendLocation",
@@ -2008,7 +2008,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendLocation \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLocation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
   },
   {
     "name": "sendVenue",
@@ -2159,7 +2159,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendVenue \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1,\n  \"title\": \"example\",\n  \"address\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVenue\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1,\n  \"title\": \"example\",\n  \"address\": \"example\"\n}'"
   },
   {
     "name": "sendContact",
@@ -2280,7 +2280,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendContact \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"phone_number\": \"example\",\n  \"first_name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendContact\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"phone_number\": \"example\",\n  \"first_name\": \"example\"\n}'"
   },
   {
     "name": "sendPoll",
@@ -2457,7 +2457,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendPoll \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"question\": \"example\",\n  \"options\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPoll\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"question\": \"example\",\n  \"options\": []\n}'"
   },
   {
     "name": "sendChecklist",
@@ -2529,7 +2529,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendChecklist \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"checklist\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendChecklist\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"checklist\": {}\n}'"
   },
   {
     "name": "sendDice",
@@ -2627,7 +2627,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendDice \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendDice\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "sendMessageDraft",
@@ -2685,7 +2685,7 @@ export const METHODS = [
       "parse_mode": "example",
       "entities": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendMessageDraft \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789,\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789,\n  \"text\": \"example\"\n}'"
   },
   {
     "name": "sendChatAction",
@@ -2728,7 +2728,7 @@ export const METHODS = [
       "message_thread_id": 123456789,
       "action": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendChatAction \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"action\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendChatAction\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"action\": \"example\"\n}'"
   },
   {
     "name": "setMessageReaction",
@@ -2771,7 +2771,7 @@ export const METHODS = [
       "reaction": [],
       "is_big": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMessageReaction \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMessageReaction\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "getUserProfilePhotos",
@@ -2806,7 +2806,7 @@ export const METHODS = [
       "offset": 123456789,
       "limit": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getUserProfilePhotos \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserProfilePhotos\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "setUserEmojiStatus",
@@ -2841,7 +2841,7 @@ export const METHODS = [
       "emoji_status_custom_emoji_id": "example",
       "emoji_status_expiration_date": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setUserEmojiStatus \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setUserEmojiStatus\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "getFile",
@@ -2862,7 +2862,7 @@ export const METHODS = [
     "jsonFull": {
       "file_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getFile \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"file_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getFile\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"file_id\": \"example\"\n}'"
   },
   {
     "name": "banChatMember",
@@ -2905,7 +2905,7 @@ export const METHODS = [
       "until_date": 123456789,
       "revoke_messages": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/banChatMember \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/banChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "unbanChatMember",
@@ -2941,7 +2941,7 @@ export const METHODS = [
       "user_id": 123456789,
       "only_if_banned": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unbanChatMember \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unbanChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "restrictChatMember",
@@ -2992,7 +2992,7 @@ export const METHODS = [
       "use_independent_chat_permissions": false,
       "until_date": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/restrictChatMember \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789,\n  \"permissions\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/restrictChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789,\n  \"permissions\": {}\n}'"
   },
   {
     "name": "promoteChatMember",
@@ -3133,7 +3133,7 @@ export const METHODS = [
       "can_manage_topics": false,
       "can_manage_direct_messages": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/promoteChatMember \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/promoteChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "setChatAdministratorCustomTitle",
@@ -3170,7 +3170,7 @@ export const METHODS = [
       "user_id": 123456789,
       "custom_title": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatAdministratorCustomTitle \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789,\n  \"custom_title\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatAdministratorCustomTitle\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789,\n  \"custom_title\": \"example\"\n}'"
   },
   {
     "name": "banChatSenderChat",
@@ -3199,7 +3199,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "sender_chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/banChatSenderChat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sender_chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/banChatSenderChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sender_chat_id\": 123456789\n}'"
   },
   {
     "name": "unbanChatSenderChat",
@@ -3228,7 +3228,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "sender_chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unbanChatSenderChat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sender_chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unbanChatSenderChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sender_chat_id\": 123456789\n}'"
   },
   {
     "name": "setChatPermissions",
@@ -3264,7 +3264,7 @@ export const METHODS = [
       "permissions": {},
       "use_independent_chat_permissions": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatPermissions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"permissions\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatPermissions\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"permissions\": {}\n}'"
   },
   {
     "name": "exportChatInviteLink",
@@ -3285,7 +3285,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/exportChatInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/exportChatInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "createChatInviteLink",
@@ -3334,7 +3334,7 @@ export const METHODS = [
       "member_limit": 123456789,
       "creates_join_request": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/createChatInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/createChatInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "editChatInviteLink",
@@ -3391,7 +3391,7 @@ export const METHODS = [
       "member_limit": 123456789,
       "creates_join_request": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editChatInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editChatInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
   },
   {
     "name": "createChatSubscriptionInviteLink",
@@ -3435,7 +3435,7 @@ export const METHODS = [
       "subscription_period": 123456789,
       "subscription_price": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/createChatSubscriptionInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"subscription_period\": 123456789,\n  \"subscription_price\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/createChatSubscriptionInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"subscription_period\": 123456789,\n  \"subscription_price\": 123456789\n}'"
   },
   {
     "name": "editChatSubscriptionInviteLink",
@@ -3471,7 +3471,7 @@ export const METHODS = [
       "invite_link": "example",
       "name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editChatSubscriptionInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editChatSubscriptionInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
   },
   {
     "name": "revokeChatInviteLink",
@@ -3500,7 +3500,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "invite_link": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/revokeChatInviteLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/revokeChatInviteLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"invite_link\": \"example\"\n}'"
   },
   {
     "name": "approveChatJoinRequest",
@@ -3529,7 +3529,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "user_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/approveChatJoinRequest \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/approveChatJoinRequest\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "declineChatJoinRequest",
@@ -3558,7 +3558,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "user_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/declineChatJoinRequest \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/declineChatJoinRequest\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "setChatPhoto",
@@ -3587,7 +3587,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "photo": "https://example.com/file.jpg"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatPhoto \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "deleteChatPhoto",
@@ -3608,7 +3608,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteChatPhoto \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteChatPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "setChatTitle",
@@ -3637,7 +3637,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "title": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatTitle \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"title\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatTitle\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"title\": \"example\"\n}'"
   },
   {
     "name": "setChatDescription",
@@ -3665,7 +3665,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "description": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatDescription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "pinChatMessage",
@@ -3708,7 +3708,7 @@ export const METHODS = [
       "message_id": 123456789,
       "disable_notification": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/pinChatMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/pinChatMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "unpinChatMessage",
@@ -3743,7 +3743,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unpinChatMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unpinChatMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "unpinAllChatMessages",
@@ -3764,7 +3764,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unpinAllChatMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unpinAllChatMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "leaveChat",
@@ -3785,7 +3785,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/leaveChat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/leaveChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "getChat",
@@ -3806,7 +3806,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "getChatAdministrators",
@@ -3827,7 +3827,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChatAdministrators \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatAdministrators\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "getChatMemberCount",
@@ -3848,7 +3848,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChatMemberCount \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatMemberCount\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "getChatMember",
@@ -3877,7 +3877,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "user_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChatMember \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "setChatStickerSet",
@@ -3906,7 +3906,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "sticker_set_name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatStickerSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sticker_set_name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sticker_set_name\": \"example\"\n}'"
   },
   {
     "name": "deleteChatStickerSet",
@@ -3927,7 +3927,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteChatStickerSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteChatStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "getForumTopicIconStickers",
@@ -3937,7 +3937,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getForumTopicIconStickers \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getForumTopicIconStickers\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "createForumTopic",
@@ -3980,7 +3980,7 @@ export const METHODS = [
       "icon_color": 123456789,
       "icon_custom_emoji_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/createForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/createForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"name\": \"example\"\n}'"
   },
   {
     "name": "editForumTopic",
@@ -4023,7 +4023,7 @@ export const METHODS = [
       "name": "example",
       "icon_custom_emoji_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
   },
   {
     "name": "closeForumTopic",
@@ -4052,7 +4052,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/closeForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/closeForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
   },
   {
     "name": "reopenForumTopic",
@@ -4081,7 +4081,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/reopenForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/reopenForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
   },
   {
     "name": "deleteForumTopic",
@@ -4110,7 +4110,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
   },
   {
     "name": "unpinAllForumTopicMessages",
@@ -4139,7 +4139,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unpinAllForumTopicMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unpinAllForumTopicMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_thread_id\": 123456789\n}'"
   },
   {
     "name": "editGeneralForumTopic",
@@ -4168,7 +4168,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editGeneralForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editGeneralForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"name\": \"example\"\n}'"
   },
   {
     "name": "closeGeneralForumTopic",
@@ -4189,7 +4189,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/closeGeneralForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/closeGeneralForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "reopenGeneralForumTopic",
@@ -4210,7 +4210,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/reopenGeneralForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/reopenGeneralForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "hideGeneralForumTopic",
@@ -4231,7 +4231,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/hideGeneralForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/hideGeneralForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "unhideGeneralForumTopic",
@@ -4252,7 +4252,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unhideGeneralForumTopic \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unhideGeneralForumTopic\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "unpinAllGeneralForumTopicMessages",
@@ -4273,7 +4273,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/unpinAllGeneralForumTopicMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/unpinAllGeneralForumTopicMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "answerCallbackQuery",
@@ -4322,7 +4322,7 @@ export const METHODS = [
       "url": "example",
       "cache_time": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/answerCallbackQuery \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"callback_query_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerCallbackQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"callback_query_id\": \"example\"\n}'"
   },
   {
     "name": "getUserChatBoosts",
@@ -4351,7 +4351,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "user_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getUserChatBoosts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserChatBoosts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "getBusinessConnection",
@@ -4372,7 +4372,7 @@ export const METHODS = [
     "jsonFull": {
       "business_connection_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getBusinessConnection \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getBusinessConnection\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "setMyCommands",
@@ -4407,7 +4407,7 @@ export const METHODS = [
       "scope": {},
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMyCommands \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"commands\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyCommands\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"commands\": []\n}'"
   },
   {
     "name": "deleteMyCommands",
@@ -4433,7 +4433,7 @@ export const METHODS = [
       "scope": {},
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteMyCommands \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMyCommands\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMyCommands",
@@ -4459,7 +4459,7 @@ export const METHODS = [
       "scope": {},
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyCommands \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyCommands\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setMyName",
@@ -4485,7 +4485,7 @@ export const METHODS = [
       "name": "example",
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMyName \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyName\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMyName",
@@ -4504,7 +4504,7 @@ export const METHODS = [
     "jsonFull": {
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyName \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyName\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setMyDescription",
@@ -4530,7 +4530,7 @@ export const METHODS = [
       "description": "example",
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMyDescription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMyDescription",
@@ -4549,7 +4549,7 @@ export const METHODS = [
     "jsonFull": {
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyDescription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setMyShortDescription",
@@ -4575,7 +4575,7 @@ export const METHODS = [
       "short_description": "example",
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMyShortDescription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyShortDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMyShortDescription",
@@ -4594,7 +4594,7 @@ export const METHODS = [
     "jsonFull": {
       "language_code": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyShortDescription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyShortDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setChatMenuButton",
@@ -4620,7 +4620,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "menu_button": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setChatMenuButton \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatMenuButton\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getChatMenuButton",
@@ -4639,7 +4639,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChatMenuButton \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatMenuButton\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setMyDefaultAdministratorRights",
@@ -4665,7 +4665,7 @@ export const METHODS = [
       "rights": {},
       "for_channels": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setMyDefaultAdministratorRights \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyDefaultAdministratorRights\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getMyDefaultAdministratorRights",
@@ -4684,7 +4684,7 @@ export const METHODS = [
     "jsonFull": {
       "for_channels": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyDefaultAdministratorRights \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyDefaultAdministratorRights\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getAvailableGifts",
@@ -4694,7 +4694,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getAvailableGifts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getAvailableGifts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "sendGift",
@@ -4757,7 +4757,7 @@ export const METHODS = [
       "text_parse_mode": "example",
       "text_entities": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendGift \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"gift_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"gift_id\": \"example\"\n}'"
   },
   {
     "name": "giftPremiumSubscription",
@@ -4815,7 +4815,7 @@ export const METHODS = [
       "text_parse_mode": "example",
       "text_entities": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/giftPremiumSubscription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"month_count\": 123456789,\n  \"star_count\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/giftPremiumSubscription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"month_count\": 123456789,\n  \"star_count\": 123456789\n}'"
   },
   {
     "name": "verifyUser",
@@ -4843,7 +4843,7 @@ export const METHODS = [
       "user_id": 123456789,
       "custom_description": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/verifyUser \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/verifyUser\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "verifyChat",
@@ -4871,7 +4871,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "custom_description": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/verifyChat \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/verifyChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "removeUserVerification",
@@ -4892,7 +4892,7 @@ export const METHODS = [
     "jsonFull": {
       "user_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/removeUserVerification \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/removeUserVerification\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "removeChatVerification",
@@ -4913,7 +4913,7 @@ export const METHODS = [
     "jsonFull": {
       "chat_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/removeChatVerification \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/removeChatVerification\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "readBusinessMessage",
@@ -4950,7 +4950,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/readBusinessMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/readBusinessMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "deleteBusinessMessages",
@@ -4979,7 +4979,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "message_ids": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteBusinessMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"message_ids\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteBusinessMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"message_ids\": []\n}'"
   },
   {
     "name": "setBusinessAccountName",
@@ -5015,7 +5015,7 @@ export const METHODS = [
       "first_name": "example",
       "last_name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setBusinessAccountName \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"first_name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setBusinessAccountName\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"first_name\": \"example\"\n}'"
   },
   {
     "name": "setBusinessAccountUsername",
@@ -5043,7 +5043,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "username": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setBusinessAccountUsername \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setBusinessAccountUsername\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "setBusinessAccountBio",
@@ -5071,7 +5071,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "bio": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setBusinessAccountBio \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setBusinessAccountBio\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "setBusinessAccountProfilePhoto",
@@ -5107,7 +5107,7 @@ export const METHODS = [
       "photo": {},
       "is_public": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setBusinessAccountProfilePhoto \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"photo\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setBusinessAccountProfilePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"photo\": {}\n}'"
   },
   {
     "name": "removeBusinessAccountProfilePhoto",
@@ -5135,7 +5135,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "is_public": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/removeBusinessAccountProfilePhoto \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/removeBusinessAccountProfilePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "setBusinessAccountGiftSettings",
@@ -5172,7 +5172,7 @@ export const METHODS = [
       "show_gift_button": false,
       "accepted_gift_types": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setBusinessAccountGiftSettings \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"show_gift_button\": false,\n  \"accepted_gift_types\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setBusinessAccountGiftSettings\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"show_gift_button\": false,\n  \"accepted_gift_types\": {}\n}'"
   },
   {
     "name": "getBusinessAccountStarBalance",
@@ -5193,7 +5193,7 @@ export const METHODS = [
     "jsonFull": {
       "business_connection_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getBusinessAccountStarBalance \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getBusinessAccountStarBalance\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "transferBusinessAccountStars",
@@ -5222,7 +5222,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "star_count": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/transferBusinessAccountStars \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"star_count\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/transferBusinessAccountStars\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"star_count\": 123456789\n}'"
   },
   {
     "name": "getBusinessAccountGifts",
@@ -5313,7 +5313,7 @@ export const METHODS = [
       "offset": "example",
       "limit": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getBusinessAccountGifts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getBusinessAccountGifts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\"\n}'"
   },
   {
     "name": "getUserGifts",
@@ -5390,7 +5390,7 @@ export const METHODS = [
       "offset": "example",
       "limit": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getUserGifts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserGifts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "getChatGifts",
@@ -5481,7 +5481,7 @@ export const METHODS = [
       "offset": "example",
       "limit": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getChatGifts \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatGifts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
     "name": "convertGiftToStars",
@@ -5510,7 +5510,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "owned_gift_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/convertGiftToStars \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/convertGiftToStars\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\"\n}'"
   },
   {
     "name": "upgradeGift",
@@ -5553,7 +5553,7 @@ export const METHODS = [
       "keep_original_details": false,
       "star_count": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/upgradeGift \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/upgradeGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\"\n}'"
   },
   {
     "name": "transferGift",
@@ -5597,7 +5597,7 @@ export const METHODS = [
       "new_owner_chat_id": 123456789,
       "star_count": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/transferGift \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\",\n  \"new_owner_chat_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/transferGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\",\n  \"new_owner_chat_id\": 123456789\n}'"
   },
   {
     "name": "postStory",
@@ -5676,7 +5676,7 @@ export const METHODS = [
       "post_to_chat_page": false,
       "protect_content": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/postStory \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"content\": {},\n  \"active_period\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/postStory\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"content\": {},\n  \"active_period\": 123456789\n}'"
   },
   {
     "name": "repostStory",
@@ -5735,7 +5735,7 @@ export const METHODS = [
       "post_to_chat_page": false,
       "protect_content": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/repostStory \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"from_chat_id\": 123456789,\n  \"from_story_id\": 123456789,\n  \"active_period\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/repostStory\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"from_chat_id\": 123456789,\n  \"from_story_id\": 123456789,\n  \"active_period\": 123456789\n}'"
   },
   {
     "name": "editStory",
@@ -5800,7 +5800,7 @@ export const METHODS = [
       "caption_entities": [],
       "areas": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editStory \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"story_id\": 123456789,\n  \"content\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editStory\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"story_id\": 123456789,\n  \"content\": {}\n}'"
   },
   {
     "name": "deleteStory",
@@ -5829,7 +5829,7 @@ export const METHODS = [
       "business_connection_id": "example",
       "story_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteStory \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"story_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteStory\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"story_id\": 123456789\n}'"
   },
   {
     "name": "editMessageText",
@@ -5906,7 +5906,7 @@ export const METHODS = [
       "link_preview_options": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageText \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"text\": \"example\"\n}'"
   },
   {
     "name": "editMessageCaption",
@@ -5981,7 +5981,7 @@ export const METHODS = [
       "show_caption_above_media": false,
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageCaption \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageCaption\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "editMessageMedia",
@@ -6037,7 +6037,7 @@ export const METHODS = [
       "media": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageMedia \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"media\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageMedia\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"media\": {}\n}'"
   },
   {
     "name": "editMessageLiveLocation",
@@ -6129,7 +6129,7 @@ export const METHODS = [
       "proximity_alert_radius": 123456789,
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageLiveLocation \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageLiveLocation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
   },
   {
     "name": "stopMessageLiveLocation",
@@ -6176,7 +6176,7 @@ export const METHODS = [
       "inline_message_id": "example",
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/stopMessageLiveLocation \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/stopMessageLiveLocation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "editMessageChecklist",
@@ -6228,7 +6228,7 @@ export const METHODS = [
       "checklist": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageChecklist \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789,\n  \"checklist\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageChecklist\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789,\n  \"checklist\": {}\n}'"
   },
   {
     "name": "editMessageReplyMarkup",
@@ -6275,7 +6275,7 @@ export const METHODS = [
       "inline_message_id": "example",
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editMessageReplyMarkup \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageReplyMarkup\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "stopPoll",
@@ -6318,7 +6318,7 @@ export const METHODS = [
       "message_id": 123456789,
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/stopPoll \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/stopPoll\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "approveSuggestedPost",
@@ -6354,7 +6354,7 @@ export const METHODS = [
       "message_id": 123456789,
       "send_date": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/approveSuggestedPost \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/approveSuggestedPost\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "declineSuggestedPost",
@@ -6390,7 +6390,7 @@ export const METHODS = [
       "message_id": 123456789,
       "comment": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/declineSuggestedPost \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/declineSuggestedPost\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "deleteMessage",
@@ -6419,7 +6419,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_id": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
     "name": "deleteMessages",
@@ -6448,7 +6448,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_ids": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteMessages \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_ids\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_ids\": []\n}'"
   },
   {
     "name": "sendSticker",
@@ -6554,7 +6554,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendSticker \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sticker\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendSticker\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sticker\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "getStickerSet",
@@ -6575,7 +6575,7 @@ export const METHODS = [
     "jsonFull": {
       "name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getStickerSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
   },
   {
     "name": "getCustomEmojiStickers",
@@ -6596,7 +6596,7 @@ export const METHODS = [
     "jsonFull": {
       "custom_emoji_ids": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getCustomEmojiStickers \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"custom_emoji_ids\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getCustomEmojiStickers\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"custom_emoji_ids\": []\n}'"
   },
   {
     "name": "uploadStickerFile",
@@ -6633,7 +6633,7 @@ export const METHODS = [
       "sticker": "https://example.com/file.jpg",
       "sticker_format": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/uploadStickerFile \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"sticker\": \"https://example.com/file.jpg\",\n  \"sticker_format\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/uploadStickerFile\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"sticker\": \"https://example.com/file.jpg\",\n  \"sticker_format\": \"example\"\n}'"
   },
   {
     "name": "createNewStickerSet",
@@ -6692,7 +6692,7 @@ export const METHODS = [
       "sticker_type": "example",
       "needs_repainting": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/createNewStickerSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"title\": \"example\",\n  \"stickers\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/createNewStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"title\": \"example\",\n  \"stickers\": []\n}'"
   },
   {
     "name": "addStickerToSet",
@@ -6729,7 +6729,7 @@ export const METHODS = [
       "name": "example",
       "sticker": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/addStickerToSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"sticker\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/addStickerToSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"sticker\": {}\n}'"
   },
   {
     "name": "setStickerPositionInSet",
@@ -6758,7 +6758,7 @@ export const METHODS = [
       "sticker": "example",
       "position": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerPositionInSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\",\n  \"position\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerPositionInSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\",\n  \"position\": 123456789\n}'"
   },
   {
     "name": "deleteStickerFromSet",
@@ -6779,7 +6779,7 @@ export const METHODS = [
     "jsonFull": {
       "sticker": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteStickerFromSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteStickerFromSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
   },
   {
     "name": "replaceStickerInSet",
@@ -6824,7 +6824,7 @@ export const METHODS = [
       "old_sticker": "example",
       "sticker": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/replaceStickerInSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"old_sticker\": \"example\",\n  \"sticker\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/replaceStickerInSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"name\": \"example\",\n  \"old_sticker\": \"example\",\n  \"sticker\": {}\n}'"
   },
   {
     "name": "setStickerEmojiList",
@@ -6853,7 +6853,7 @@ export const METHODS = [
       "sticker": "example",
       "emoji_list": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerEmojiList \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\",\n  \"emoji_list\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerEmojiList\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\",\n  \"emoji_list\": []\n}'"
   },
   {
     "name": "setStickerKeywords",
@@ -6881,7 +6881,7 @@ export const METHODS = [
       "sticker": "example",
       "keywords": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerKeywords \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerKeywords\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
   },
   {
     "name": "setStickerMaskPosition",
@@ -6909,7 +6909,7 @@ export const METHODS = [
       "sticker": "example",
       "mask_position": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerMaskPosition \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerMaskPosition\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"example\"\n}'"
   },
   {
     "name": "setStickerSetTitle",
@@ -6938,7 +6938,7 @@ export const METHODS = [
       "name": "example",
       "title": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerSetTitle \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\",\n  \"title\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerSetTitle\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\",\n  \"title\": \"example\"\n}'"
   },
   {
     "name": "setStickerSetThumbnail",
@@ -6982,7 +6982,7 @@ export const METHODS = [
       "thumbnail": "https://example.com/file.jpg",
       "format": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setStickerSetThumbnail \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\",\n  \"user_id\": 123456789,\n  \"format\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setStickerSetThumbnail\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\",\n  \"user_id\": 123456789,\n  \"format\": \"example\"\n}'"
   },
   {
     "name": "setCustomEmojiStickerSetThumbnail",
@@ -7010,7 +7010,7 @@ export const METHODS = [
       "name": "example",
       "custom_emoji_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setCustomEmojiStickerSetThumbnail \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setCustomEmojiStickerSetThumbnail\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
   },
   {
     "name": "deleteStickerSet",
@@ -7031,7 +7031,7 @@ export const METHODS = [
     "jsonFull": {
       "name": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/deleteStickerSet \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
   },
   {
     "name": "answerInlineQuery",
@@ -7088,7 +7088,7 @@ export const METHODS = [
       "next_offset": "example",
       "button": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/answerInlineQuery \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"inline_query_id\": \"example\",\n  \"results\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerInlineQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"inline_query_id\": \"example\",\n  \"results\": []\n}'"
   },
   {
     "name": "answerWebAppQuery",
@@ -7117,7 +7117,7 @@ export const METHODS = [
       "web_app_query_id": "example",
       "result": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/answerWebAppQuery \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"web_app_query_id\": \"example\",\n  \"result\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerWebAppQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"web_app_query_id\": \"example\",\n  \"result\": {}\n}'"
   },
   {
     "name": "savePreparedInlineMessage",
@@ -7174,7 +7174,7 @@ export const METHODS = [
       "allow_group_chats": false,
       "allow_channel_chats": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/savePreparedInlineMessage \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"result\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/savePreparedInlineMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"result\": {}\n}'"
   },
   {
     "name": "sendInvoice",
@@ -7410,7 +7410,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendInvoice \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"title\": \"example\",\n  \"description\": \"example\",\n  \"payload\": \"example\",\n  \"currency\": \"example\",\n  \"prices\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendInvoice\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"title\": \"example\",\n  \"description\": \"example\",\n  \"payload\": \"example\",\n  \"currency\": \"example\",\n  \"prices\": []\n}'"
   },
   {
     "name": "createInvoiceLink",
@@ -7582,7 +7582,7 @@ export const METHODS = [
       "send_email_to_provider": false,
       "is_flexible": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/createInvoiceLink \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"title\": \"example\",\n  \"description\": \"example\",\n  \"payload\": \"example\",\n  \"currency\": \"example\",\n  \"prices\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/createInvoiceLink\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"title\": \"example\",\n  \"description\": \"example\",\n  \"payload\": \"example\",\n  \"currency\": \"example\",\n  \"prices\": []\n}'"
   },
   {
     "name": "answerShippingQuery",
@@ -7625,7 +7625,7 @@ export const METHODS = [
       "shipping_options": [],
       "error_message": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/answerShippingQuery \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"shipping_query_id\": \"example\",\n  \"ok\": false\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerShippingQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"shipping_query_id\": \"example\",\n  \"ok\": false\n}'"
   },
   {
     "name": "answerPreCheckoutQuery",
@@ -7661,7 +7661,7 @@ export const METHODS = [
       "ok": false,
       "error_message": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/answerPreCheckoutQuery \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"pre_checkout_query_id\": \"example\",\n  \"ok\": false\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerPreCheckoutQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"pre_checkout_query_id\": \"example\",\n  \"ok\": false\n}'"
   },
   {
     "name": "getMyStarBalance",
@@ -7671,7 +7671,7 @@ export const METHODS = [
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getMyStarBalance \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyStarBalance\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "getStarTransactions",
@@ -7697,7 +7697,7 @@ export const METHODS = [
       "offset": 123456789,
       "limit": 123456789
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getStarTransactions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getStarTransactions\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "refundStarPayment",
@@ -7726,7 +7726,7 @@ export const METHODS = [
       "user_id": 123456789,
       "telegram_payment_charge_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/refundStarPayment \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"telegram_payment_charge_id\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/refundStarPayment\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"telegram_payment_charge_id\": \"example\"\n}'"
   },
   {
     "name": "editUserStarSubscription",
@@ -7763,7 +7763,7 @@ export const METHODS = [
       "telegram_payment_charge_id": "example",
       "is_canceled": false
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/editUserStarSubscription \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"telegram_payment_charge_id\": \"example\",\n  \"is_canceled\": false\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editUserStarSubscription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"telegram_payment_charge_id\": \"example\",\n  \"is_canceled\": false\n}'"
   },
   {
     "name": "setPassportDataErrors",
@@ -7792,7 +7792,7 @@ export const METHODS = [
       "user_id": 123456789,
       "errors": []
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setPassportDataErrors \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"errors\": []\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setPassportDataErrors\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"errors\": []\n}'"
   },
   {
     "name": "sendGame",
@@ -7877,7 +7877,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/sendGame \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"game_short_name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendGame\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"game_short_name\": \"example\"\n}'"
   },
   {
     "name": "setGameScore",
@@ -7941,7 +7941,7 @@ export const METHODS = [
       "message_id": 123456789,
       "inline_message_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/setGameScore \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"score\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setGameScore\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"score\": 123456789\n}'"
   },
   {
     "name": "getGameHighScores",
@@ -7983,8 +7983,6 @@ export const METHODS = [
       "message_id": 123456789,
       "inline_message_id": "example"
     },
-    "curl": "curl -X POST https://api.telegram.org/bot<TOKEN>/getGameHighScores \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getGameHighScores\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   }
 ];
-
-export const OBJECTS = [];
