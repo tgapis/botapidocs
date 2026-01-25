@@ -1,0 +1,36 @@
+name: Build Docs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - botapi.json
+      - generate.js
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+      - run: npm run build
+
+      - name: Commit docs
+        run: |
+          git config user.name "Ankit Chaubey"
+          git config user.email "70747360+ankit-chaubey@users.noreply.github.com"
+
+          git add docs
+          git commit -m "docs: rebuild from latest botapi.json" || exit 0
+          git push

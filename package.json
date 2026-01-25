@@ -1,0 +1,8 @@
+{
+  "name": "telegram-bot-api-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node generate.js"
+  }
+}

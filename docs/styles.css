@@ -1,0 +1,342 @@
+/* =========================================================
+   RESET & BASE
+========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont;
+  background: #f6f8fa;
+  color: #0f1724;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+body.dark {
+  background: #071126;
+  color: #e6eef8;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: linear-gradient(90deg, #0b74de, #00a3ff);
+  color: white;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+header .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  position: relative; /* REQUIRED for search dropdown */
+}
+
+header input {
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  min-width: 200px;
+}
+
+header button {
+  background: rgba(255,255,255,0.18);
+  border: none;
+  color: white;
+  padding: 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* =========================================================
+   SEARCH DROPDOWN (FIXED)
+========================================================= */
+.search-results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #0f1724; /* 🔥 FIX: explicit text color */
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+  z-index: 200;
+  display: none;
+}
+
+/* Dark mode */
+body.dark .search-results {
+  background: #0b132b;
+  color: #e6eef8;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+body.dark .search-results a {
+  border-bottom-color: rgba(255,255,255,0.06);
+}
+
+.search-results a:hover,
+.search-results a:focus {
+  background: rgba(11,116,222,0.15);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+.menu-toggle {
+  display: none;
+  background: rgba(255,255,255,0.22);
+  border: none;
+  color: white;
+  font-size: 1.15rem;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+main {
+  display: flex;
+  min-height: calc(100vh - 56px);
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+aside {
+  width: 270px;
+  min-width: 270px;
+  background: #ffffff;
+  padding: 0.75rem;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+  transition: transform 0.25s ease;
+}
+
+body.dark aside {
+  background: #0b132b;
+  border-right-color: #1e293b;
+}
+
+aside a {
+  display: block;
+  padding: 7px 9px;
+  margin-bottom: 2px;
+  text-decoration: none;
+  color: #0b74de;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+aside a:hover {
+  background: rgba(11,116,222,0.12);
+}
+
+aside a.active {
+  background: rgba(11,116,222,0.22);
+  font-weight: 600;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+section {
+  flex: 1;
+  padding: 1.75rem;
+  overflow-y: auto;
+  max-width: 1200px;
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+section h3 {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+}
+
+body.method-open section {
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.buttons button {
+  background: linear-gradient(90deg,#0b74de,#00a3ff);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   TABLES
+========================================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #eef2f7;
+}
+
+body.dark thead th {
+  background: #111827;
+}
+
+th, td {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark th,
+body.dark td {
+  border-bottom-color: #1e293b;
+}
+
+/* =========================================================
+   CODE BLOCKS
+========================================================= */
+pre {
+  background: #0f1724;
+  color: #e6eef8;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+}
+
+code {
+  background: rgba(0,0,0,0.08);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+body.dark code {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Syntax highlighting */
+pre .key { color: #7c3aed; }
+pre .string { color: #16a34a; }
+pre .number { color: #f59e0b; }
+pre .boolean { color: #ef4444; }
+pre .flag { color: #38bdf8; }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+body.dark .footer {
+  color: #9aa7b2;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  header input {
+    min-width: 100%;
+  }
+
+  aside {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    height: calc(100vh - 56px);
+    max-width: 85%;
+    z-index: 100;
+    transform: translateX(-100%);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+  }
+
+  body.menu-open aside {
+    transform: translateX(0);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  section {
+    padding: 1.1rem;
+  }
+
+  body.method-open section {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+}

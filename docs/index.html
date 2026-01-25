@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Bot API Docs – Searchable Telegram Bot API with JSON & curl</title>
+
+  <!-- Mobile safe -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b74de" />
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Searchable, schema-driven Telegram Bot API documentation with ready-to-use JSON payloads and curl examples. Fast, minimal, unofficial docs for developers."
+  />
+
+  <!-- Canonical -->
+  <link
+    rel="canonical"
+    href="https://tgapis.github.io/botapidocs/"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bot API Docs – Telegram Bot API Explorer" />
+  <meta
+    property="og:description"
+    content="Search Telegram Bot API methods instantly. Copy JSON & curl examples. Minimal, fast, unofficial docs."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tgapis.github.io/botapidocs/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bot API Docs – Telegram Bot API Explorer" />
+  <meta
+    name="twitter:description"
+    content="Search Telegram Bot API methods instantly. Copy JSON & curl examples."
+  />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS (GitHub Pages safe) -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Bot API Docs",
+    "applicationCategory": "DeveloperTool",
+    "operatingSystem": "Web",
+    "description": "Searchable Telegram Bot API documentation with JSON and curl examples.",
+    "author": {
+      "@type": "Person",
+      "name": "Ankit Chaubey",
+      "url": "https://github.com/ankit-chaubey"
+    },
+    "url": "https://tgapis.github.io/botapidocs/"
+  }
+  </script>
+</head>
+<body>
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+  <header>
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      id="menuToggle"
+      class="menu-toggle"
+      aria-label="Toggle methods menu"
+      title="Menu"
+    >
+      ☰
+    </button>
+
+    <!-- BRAND / HOME -->
+    <h1 id="home">
+      <a href="#" aria-label="Home" style="color:inherit;text-decoration:none">
+        Bot API Docs
+      </a>
+    </h1>
+
+    <!-- ACTIONS -->
+    <div class="actions">
+      <div style="position:relative">
+        <input
+          id="search"
+          type="search"
+          placeholder="Search method…"
+          autocomplete="off"
+          aria-label="Search methods"
+        />
+
+        <!-- SEARCH DROPDOWN RESULTS -->
+        <div
+          id="searchResults"
+          class="search-results"
+          aria-label="Search results"
+        ></div>
+      </div>
+
+      <button
+        id="themeToggle"
+        title="Toggle dark mode"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- =======================================================
+       MAIN LAYOUT
+  ======================================================== -->
+  <main>
+    <!-- METHODS SIDEBAR -->
+    <aside
+      id="menu"
+      aria-label="Telegram Bot API methods"
+    ></aside>
+
+    <!-- CONTENT -->
+    <section
+      id="content"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <!-- Filled dynamically by app.js -->
+    </section>
+  </main>
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+      <!-- Filled dynamically by app.js -->
+  <!-- =======================================================
+       APP SCRIPT
+  ======================================================== -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
