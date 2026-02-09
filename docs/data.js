@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 9.3",
-  "release_date": "December 31, 2025",
-  "changelog": "https://core.telegram.org/bots/api#december-31-2025"
+  "version": "Bot API 9.4",
+  "release_date": "February 9, 2026",
+  "changelog": "https://core.telegram.org/bots/api#february-9-2026"
 };
 
 export const METHODS = [
@@ -2809,6 +2809,41 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserProfilePhotos\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
   {
+    "name": "getUserProfileAudios",
+    "href": "https://core.telegram.org/bots/api#getuserprofileaudios",
+    "description": "Use this method to get a list of profile audios for a user. Returns a UserProfileAudios object.",
+    "returns": "UserProfileAudios",
+    "params": [
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Unique identifier of the target user"
+      },
+      {
+        "name": "offset",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Sequential number of the first audio to be returned. By default, all audios are returned."
+      },
+      {
+        "name": "limit",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Limits the number of audios to be retrieved. Values between 1-100 are accepted. Defaults to 100."
+      }
+    ],
+    "jsonRequired": {
+      "user_id": 123456789
+    },
+    "jsonFull": {
+      "user_id": 123456789,
+      "offset": 123456789,
+      "limit": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserProfileAudios\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+  },
+  {
     "name": "setUserEmojiStatus",
     "href": "https://core.telegram.org/bots/api#setuseremojistatus",
     "description": "Changes the emoji status for a given user that previously allowed the bot to manage their emoji status via the Mini App method requestEmojiStatusAccess. Returns True on success.",
@@ -3942,7 +3977,7 @@ export const METHODS = [
   {
     "name": "createForumTopic",
     "href": "https://core.telegram.org/bots/api#createforumtopic",
-    "description": "Use this method to create a topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. Returns information about the created topic as a ForumTopic object.",
+    "description": "Use this method to create a topic in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. Returns information about the created topic as a ForumTopic object.",
     "returns": "ForumTopic",
     "params": [
       {
@@ -4595,6 +4630,37 @@ export const METHODS = [
       "language_code": "example"
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getMyShortDescription\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+  },
+  {
+    "name": "setMyProfilePhoto",
+    "href": "https://core.telegram.org/bots/api#setmyprofilephoto",
+    "description": "Changes the profile photo of the bot. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "photo",
+        "typesLabel": "InputProfilePhoto",
+        "required": true,
+        "description": "The new profile photo to set"
+      }
+    ],
+    "jsonRequired": {
+      "photo": {}
+    },
+    "jsonFull": {
+      "photo": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMyProfilePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"photo\": {}\n}'"
+  },
+  {
+    "name": "removeMyProfilePhoto",
+    "href": "https://core.telegram.org/bots/api#removemyprofilephoto",
+    "description": "Removes the profile photo of the bot. Requires no parameters. Returns True on success.",
+    "returns": "Boolean",
+    "params": [],
+    "jsonRequired": {},
+    "jsonFull": {},
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/removeMyProfilePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setChatMenuButton",
