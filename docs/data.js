@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 9.4",
-  "release_date": "February 9, 2026",
-  "changelog": "https://core.telegram.org/bots/api#february-9-2026"
+  "version": "Bot API 9.5",
+  "release_date": "March 1, 2026",
+  "changelog": "https://core.telegram.org/bots/api#march-1-2026"
 };
 
 export const METHODS = [
@@ -2632,7 +2632,7 @@ export const METHODS = [
   {
     "name": "sendMessageDraft",
     "href": "https://core.telegram.org/bots/api#sendmessagedraft",
-    "description": "Use this method to stream a partial message to a user while the message is being generated; supported only for bots with forum topic mode enabled. Returns True on success.",
+    "description": "Use this method to stream a partial message to a user while the message is being generated. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -3142,6 +3142,12 @@ export const METHODS = [
         "typesLabel": "Boolean",
         "required": false,
         "description": "Pass True if the administrator can manage direct messages within the channel and decline suggested posts; for channels only"
+      },
+      {
+        "name": "can_manage_tags",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the administrator can edit the tags of regular members; for groups and supergroups only"
       }
     ],
     "jsonRequired": {
@@ -3166,7 +3172,8 @@ export const METHODS = [
       "can_edit_messages": false,
       "can_pin_messages": false,
       "can_manage_topics": false,
-      "can_manage_direct_messages": false
+      "can_manage_direct_messages": false,
+      "can_manage_tags": false
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/promoteChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
@@ -3206,6 +3213,42 @@ export const METHODS = [
       "custom_title": "example"
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatAdministratorCustomTitle\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789,\n  \"custom_title\": \"example\"\n}'"
+  },
+  {
+    "name": "setChatMemberTag",
+    "href": "https://core.telegram.org/bots/api#setchatmembertag",
+    "description": "Use this method to set a tag for a regular member in a group or a supergroup. The bot must be an administrator in the chat for this to work and must have the can_manage_tags administrator right. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+      },
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Unique identifier of the target user"
+      },
+      {
+        "name": "tag",
+        "typesLabel": "String",
+        "required": false,
+        "description": "New tag for the member; 0-16 characters, emoji are not allowed"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "user_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "user_id": 123456789,
+      "tag": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setChatMemberTag\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
     "name": "banChatSenderChat",
