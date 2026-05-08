@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 9.6",
-  "release_date": "April 3, 2026",
-  "changelog": "https://core.telegram.org/bots/api#april-3-2026"
+  "version": "Bot API 10.0",
+  "release_date": "May 8, 2026",
+  "changelog": "https://core.telegram.org/bots/api#may-8-2026"
 };
 
 export const METHODS = [
@@ -185,7 +185,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -239,7 +239,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -299,7 +299,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -317,7 +317,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername)"
+        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup or channel in the format @username)"
       },
       {
         "name": "video_start_timestamp",
@@ -385,7 +385,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -403,7 +403,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original messages were sent (or channel username in the format @channelusername)"
+        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup or channel in the format @username)"
       },
       {
         "name": "message_ids",
@@ -450,7 +450,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -468,7 +468,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername)"
+        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup or channel in the format @username)"
       },
       {
         "name": "message_id",
@@ -522,7 +522,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -585,7 +585,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -603,7 +603,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original messages were sent (or channel username in the format @channelusername)"
+        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup or channel in the format @username)"
       },
       {
         "name": "message_ids",
@@ -663,7 +663,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -729,7 +729,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -782,6 +782,148 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
   },
   {
+    "name": "sendLivePhoto",
+    "href": "https://core.telegram.org/bots/api#sendlivephoto",
+    "description": "Use this method to send live photos. On success, the sent Message is returned.",
+    "returns": "Message",
+    "params": [
+      {
+        "name": "business_connection_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the business connection on behalf of which the message will be sent"
+      },
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+      },
+      {
+        "name": "message_thread_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only"
+      },
+      {
+        "name": "direct_messages_topic_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "live_photo",
+        "typesLabel": "InputFile | String",
+        "required": true,
+        "description": "Live photo video to send. The video must be no longer than 10 seconds and must not exceed 10 MB in size. Pass a file_id as String to send a video that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending live photos by a URL is currently unsupported."
+      },
+      {
+        "name": "photo",
+        "typesLabel": "InputFile | String",
+        "required": true,
+        "description": "The static photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending live photos by a URL is currently unsupported."
+      },
+      {
+        "name": "caption",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Video caption (may also be used when resending videos by file_id), 0-1024 characters after entities parsing"
+      },
+      {
+        "name": "parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the video caption. See formatting options for more details."
+      },
+      {
+        "name": "caption_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the caption, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "show_caption_above_media",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True, if the caption must be shown above the message media"
+      },
+      {
+        "name": "has_spoiler",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the video needs to be covered with a spoiler animation"
+      },
+      {
+        "name": "disable_notification",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Sends the message silently. Users will receive a notification with no sound."
+      },
+      {
+        "name": "protect_content",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Protects the contents of the sent message from forwarding and saving"
+      },
+      {
+        "name": "allow_paid_broadcast",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
+      },
+      {
+        "name": "message_effect_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the message effect to be added to the message; for private chats only"
+      },
+      {
+        "name": "suggested_post_parameters",
+        "typesLabel": "SuggestedPostParameters",
+        "required": false,
+        "description": "A JSON-serialized object containing the parameters of the suggested post to send; for direct messages chats only. If the message is sent as a reply to another suggested post, then that suggested post is automatically declined."
+      },
+      {
+        "name": "reply_parameters",
+        "typesLabel": "ReplyParameters",
+        "required": false,
+        "description": "Description of the message to reply to"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
+        "required": false,
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "live_photo": "https://example.com/file.jpg",
+      "photo": "https://example.com/file.jpg"
+    },
+    "jsonFull": {
+      "business_connection_id": "example",
+      "chat_id": 123456789,
+      "message_thread_id": 123456789,
+      "direct_messages_topic_id": 123456789,
+      "live_photo": "https://example.com/file.jpg",
+      "photo": "https://example.com/file.jpg",
+      "caption": "example",
+      "parse_mode": "example",
+      "caption_entities": [],
+      "show_caption_above_media": false,
+      "has_spoiler": false,
+      "disable_notification": false,
+      "protect_content": false,
+      "allow_paid_broadcast": false,
+      "message_effect_id": "example",
+      "suggested_post_parameters": {},
+      "reply_parameters": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLivePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"live_photo\": \"https://example.com/file.jpg\",\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
+  },
+  {
     "name": "sendAudio",
     "href": "https://core.telegram.org/bots/api#sendaudio",
     "description": "Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .MP3 or .M4A format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.\nFor sending voice messages, use the sendVoice method instead.",
@@ -797,7 +939,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -875,7 +1017,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -945,7 +1087,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1011,7 +1153,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1079,7 +1221,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1187,7 +1329,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1262,7 +1404,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1352,7 +1494,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1424,7 +1566,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1484,7 +1626,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1551,7 +1693,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1605,7 +1747,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1671,7 +1813,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername). If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance."
       },
       {
         "name": "message_thread_id",
@@ -1743,7 +1885,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "suggested_post_parameters",
@@ -1793,7 +1935,7 @@ export const METHODS = [
   {
     "name": "sendMediaGroup",
     "href": "https://core.telegram.org/bots/api#sendmediagroup",
-    "description": "Use this method to send a group of photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an array of Message objects that were sent is returned.",
+    "description": "Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an array of Message objects that were sent is returned.",
     "returns": "Array of Message",
     "params": [
       {
@@ -1806,7 +1948,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1822,7 +1964,7 @@ export const METHODS = [
       },
       {
         "name": "media",
-        "typesLabel": "Array of InputMediaAudio | Array of InputMediaDocument | Array of InputMediaPhoto | Array of InputMediaVideo",
+        "typesLabel": "Array of InputMediaAudio | Array of InputMediaDocument | Array of InputMediaLivePhoto | Array of InputMediaPhoto | Array of InputMediaVideo",
         "required": true,
         "description": "A JSON-serialized array describing messages to be sent, must include 2-10 items"
       },
@@ -1842,7 +1984,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -1891,7 +2033,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -1957,7 +2099,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -2026,7 +2168,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -2104,7 +2246,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -2177,7 +2319,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -2231,7 +2373,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -2298,7 +2440,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername). Polls can't be sent to channel direct messages chats."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Polls can't be sent to channel direct messages chats."
       },
       {
         "name": "message_thread_id",
@@ -2328,7 +2470,7 @@ export const METHODS = [
         "name": "options",
         "typesLabel": "Array of InputPollOption",
         "required": true,
-        "description": "A JSON-serialized list of 2-12 answer options"
+        "description": "A JSON-serialized list of 1-12 answer options"
       },
       {
         "name": "is_anonymous",
@@ -2373,6 +2515,18 @@ export const METHODS = [
         "description": "Pass True, if poll results must be shown only after the poll closes"
       },
       {
+        "name": "members_only",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True, if voting is limited to users who have been members of the chat where the poll is being sent for more than 24 hours; for channel chats only"
+      },
+      {
+        "name": "country_codes",
+        "typesLabel": "Array of String",
+        "required": false,
+        "description": "A JSON-serialized list of 0-12 two-letter ISO 3166-1 alpha-2 country codes indicating the countries from which users can vote in the poll; for channel chats only. If omitted or empty, then users from any country can participate in the poll."
+      },
+      {
         "name": "correct_option_ids",
         "typesLabel": "Array of Integer",
         "required": false,
@@ -2395,6 +2549,12 @@ export const METHODS = [
         "typesLabel": "Array of MessageEntity",
         "required": false,
         "description": "A JSON-serialized list of special entities that appear in the poll explanation. It can be specified instead of explanation_parse_mode"
+      },
+      {
+        "name": "explanation_media",
+        "typesLabel": "InputPollMedia",
+        "required": false,
+        "description": "Media added to the quiz explanation"
       },
       {
         "name": "open_period",
@@ -2433,6 +2593,12 @@ export const METHODS = [
         "description": "A JSON-serialized list of special entities that appear in the poll description, which can be specified instead of description_parse_mode"
       },
       {
+        "name": "media",
+        "typesLabel": "InputPollMedia",
+        "required": false,
+        "description": "Media added to the poll description"
+      },
+      {
         "name": "disable_notification",
         "typesLabel": "Boolean",
         "required": false,
@@ -2448,7 +2614,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -2489,16 +2655,20 @@ export const METHODS = [
       "shuffle_options": false,
       "allow_adding_options": false,
       "hide_results_until_closes": false,
+      "members_only": false,
+      "country_codes": [],
       "correct_option_ids": [],
       "explanation": "example",
       "explanation_parse_mode": "example",
       "explanation_entities": [],
+      "explanation_media": {},
       "open_period": 123456789,
       "close_date": 123456789,
       "is_closed": false,
       "description": "example",
       "description_parse_mode": "example",
       "description_entities": [],
+      "media": {},
       "disable_notification": false,
       "protect_content": false,
       "allow_paid_broadcast": false,
@@ -2522,9 +2692,9 @@ export const METHODS = [
       },
       {
         "name": "chat_id",
-        "typesLabel": "Integer",
+        "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat"
+        "description": "Unique identifier for the target chat or username of the target bot in the format @username"
       },
       {
         "name": "checklist",
@@ -2596,7 +2766,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -2632,7 +2802,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -2681,7 +2851,7 @@ export const METHODS = [
   {
     "name": "sendMessageDraft",
     "href": "https://core.telegram.org/bots/api#sendmessagedraft",
-    "description": "Use this method to stream a partial message to a user while the message is being generated. Returns True on success.",
+    "description": "Use this method to stream a partial message to a user while the message is being generated. Note that the streamed draft is ephemeral and acts as a temporary 30-second preview - once the output is finalized, you must call sendMessage with the complete message to persist it in the user's chat. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -2700,13 +2870,13 @@ export const METHODS = [
         "name": "draft_id",
         "typesLabel": "Integer",
         "required": true,
-        "description": "Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated"
+        "description": "Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated."
       },
       {
         "name": "text",
         "typesLabel": "String",
-        "required": true,
-        "description": "Text of the message to be sent, 1-4096 characters after entities parsing"
+        "required": false,
+        "description": "Text of the message to be sent, 0-4096 characters after entities parsing. Pass an empty text to show a \"Thinking...\" placeholder."
       },
       {
         "name": "parse_mode",
@@ -2723,8 +2893,7 @@ export const METHODS = [
     ],
     "jsonRequired": {
       "chat_id": 123456789,
-      "draft_id": 123456789,
-      "text": "example"
+      "draft_id": 123456789
     },
     "jsonFull": {
       "chat_id": 123456789,
@@ -2734,7 +2903,7 @@ export const METHODS = [
       "parse_mode": "example",
       "entities": []
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789,\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789\n}'"
   },
   {
     "name": "sendChatAction",
@@ -2752,7 +2921,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername). Channel chats and channel direct messages chats aren't supported."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Channel chats and channel direct messages chats aren't supported."
       },
       {
         "name": "message_thread_id",
@@ -2789,7 +2958,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -2958,7 +3127,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target group or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target group or username of the target supergroup or channel in the format @username"
       },
       {
         "name": "user_id",
@@ -3001,7 +3170,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target group or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target group or username of the target supergroup or channel in the format @username"
       },
       {
         "name": "user_id",
@@ -3037,7 +3206,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "user_id",
@@ -3088,7 +3257,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "user_id",
@@ -3236,7 +3405,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "user_id",
@@ -3273,7 +3442,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "user_id",
@@ -3309,7 +3478,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "sender_chat_id",
@@ -3338,7 +3507,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "sender_chat_id",
@@ -3367,7 +3536,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "permissions",
@@ -3403,7 +3572,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -3424,7 +3593,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "name",
@@ -3473,7 +3642,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "invite_link",
@@ -3530,7 +3699,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target channel chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target channel chat or username of the target channel in the format @username"
       },
       {
         "name": "name",
@@ -3574,7 +3743,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "invite_link",
@@ -3610,7 +3779,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier of the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier of the target chat or username of the target channel in the format @username"
       },
       {
         "name": "invite_link",
@@ -3639,7 +3808,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "user_id",
@@ -3668,7 +3837,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "user_id",
@@ -3697,7 +3866,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "photo",
@@ -3726,7 +3895,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -3747,7 +3916,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "title",
@@ -3776,7 +3945,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "description",
@@ -3810,7 +3979,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "message_id",
@@ -3853,7 +4022,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "message_id",
@@ -3882,7 +4051,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -3903,7 +4072,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername). Channel direct messages chats aren't supported; leave the corresponding channel instead."
+        "description": "Unique identifier for the target chat or username of the target supergroup or channel in the format @username. Channel direct messages chats aren't supported; leave the corresponding channel instead."
       }
     ],
     "jsonRequired": {
@@ -3924,7 +4093,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup or channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -3938,21 +4107,28 @@ export const METHODS = [
   {
     "name": "getChatAdministrators",
     "href": "https://core.telegram.org/bots/api#getchatadministrators",
-    "description": "Use this method to get a list of administrators in a chat, which aren't bots. Returns an Array of ChatMember objects.",
+    "description": "Use this method to get a list of administrators in a chat. Returns an Array of ChatMember objects.",
     "returns": "Array of ChatMember",
     "params": [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup or channel in the format @username"
+      },
+      {
+        "name": "return_bots",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to additionally receive all bots that are administrators of the chat. By default, bots other than the current bot are omitted."
       }
     ],
     "jsonRequired": {
       "chat_id": 123456789
     },
     "jsonFull": {
-      "chat_id": 123456789
+      "chat_id": 123456789,
+      "return_bots": false
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatAdministrators\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
@@ -3966,7 +4142,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup or channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -3987,7 +4163,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup or channel in the format @username"
       },
       {
         "name": "user_id",
@@ -4007,6 +4183,35 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
+    "name": "getUserPersonalChatMessages",
+    "href": "https://core.telegram.org/bots/api#getuserpersonalchatmessages",
+    "description": "Use this method to get the last messages from the personal chat (i.e., the chat currently added to their profile) of a given user. On success, an array of Message objects is returned.",
+    "returns": "Array of Message",
+    "params": [
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Unique identifier for the target user"
+      },
+      {
+        "name": "limit",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "The maximum number of messages to return; 1-20"
+      }
+    ],
+    "jsonRequired": {
+      "user_id": 123456789,
+      "limit": 123456789
+    },
+    "jsonFull": {
+      "user_id": 123456789,
+      "limit": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUserPersonalChatMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"limit\": 123456789\n}'"
+  },
+  {
     "name": "setChatStickerSet",
     "href": "https://core.telegram.org/bots/api#setchatstickerset",
     "description": "Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Use the field can_set_sticker_set optionally returned in getChat requests to check if the bot can use this method. Returns True on success.",
@@ -4016,7 +4221,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "sticker_set_name",
@@ -4045,7 +4250,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4076,7 +4281,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "name",
@@ -4119,7 +4324,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -4162,7 +4367,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -4191,7 +4396,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -4220,7 +4425,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -4249,7 +4454,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -4278,7 +4483,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "name",
@@ -4307,7 +4512,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4328,7 +4533,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4349,7 +4554,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4370,7 +4575,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4391,7 +4596,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       }
     ],
     "jsonRequired": {
@@ -4452,6 +4657,35 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerCallbackQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"callback_query_id\": \"example\"\n}'"
   },
   {
+    "name": "answerGuestQuery",
+    "href": "https://core.telegram.org/bots/api#answerguestquery",
+    "description": "Use this method to reply to a received guest message. On success, a SentGuestMessage object is returned.",
+    "returns": "SentGuestMessage",
+    "params": [
+      {
+        "name": "guest_query_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier for the query to be answered"
+      },
+      {
+        "name": "result",
+        "typesLabel": "InlineQueryResult",
+        "required": true,
+        "description": "A JSON-serialized object describing the message to be sent"
+      }
+    ],
+    "jsonRequired": {
+      "guest_query_id": "example",
+      "result": {}
+    },
+    "jsonFull": {
+      "guest_query_id": "example",
+      "result": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerGuestQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"guest_query_id\": \"example\",\n  \"result\": {}\n}'"
+  },
+  {
     "name": "getUserChatBoosts",
     "href": "https://core.telegram.org/bots/api#getuserchatboosts",
     "description": "Use this method to get the list of boosts added to a chat by a user. Requires administrator rights in the chat. Returns a UserChatBoosts object.",
@@ -4461,7 +4695,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat or username of the channel (in the format @channelusername)"
+        "description": "Unique identifier for the chat or username of the channel in the format @username"
       },
       {
         "name": "user_id",
@@ -4542,6 +4776,63 @@ export const METHODS = [
       "user_id": 123456789
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/replaceManagedBotToken\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+  },
+  {
+    "name": "getManagedBotAccessSettings",
+    "href": "https://core.telegram.org/bots/api#getmanagedbotaccesssettings",
+    "description": "Use this method to get the access settings of a managed bot. Returns a BotAccessSettings object on success.",
+    "returns": "BotAccessSettings",
+    "params": [
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "User identifier of the managed bot whose access settings will be returned"
+      }
+    ],
+    "jsonRequired": {
+      "user_id": 123456789
+    },
+    "jsonFull": {
+      "user_id": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getManagedBotAccessSettings\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
+  },
+  {
+    "name": "setManagedBotAccessSettings",
+    "href": "https://core.telegram.org/bots/api#setmanagedbotaccesssettings",
+    "description": "Use this method to change the access settings of a managed bot. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "User identifier of the managed bot whose access settings will be changed"
+      },
+      {
+        "name": "is_access_restricted",
+        "typesLabel": "Boolean",
+        "required": true,
+        "description": "Pass True, if only selected users can access the bot. The bot's owner can always access it."
+      },
+      {
+        "name": "added_user_ids",
+        "typesLabel": "Array of Integer",
+        "required": false,
+        "description": "A JSON-serialized list of up to 10 identifiers of users who will have access to the bot in addition to its owner. Ignored if is_access_restricted is false."
+      }
+    ],
+    "jsonRequired": {
+      "user_id": 123456789,
+      "is_access_restricted": false
+    },
+    "jsonFull": {
+      "user_id": 123456789,
+      "is_access_restricted": false,
+      "added_user_ids": []
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setManagedBotAccessSettings\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"is_access_restricted\": false\n}'"
   },
   {
     "name": "setMyCommands",
@@ -4912,7 +5203,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if user_id is not specified. Unique identifier for the chat or username of the channel (in the format @channelusername) that will receive the gift."
+        "description": "Required if user_id is not specified. Unique identifier for the chat or username of the channel (in the format @username) that will receive the gift."
       },
       {
         "name": "gift_id",
@@ -5055,7 +5346,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername). Channel direct messages chats can't be verified."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Channel direct messages chats can't be verified."
       },
       {
         "name": "custom_description",
@@ -5104,7 +5395,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot or channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -5602,7 +5893,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target channel in the format @username"
       },
       {
         "name": "exclude_unsaved",
@@ -6162,7 +6453,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6239,7 +6530,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6301,7 +6592,7 @@ export const METHODS = [
   {
     "name": "editMessageMedia",
     "href": "https://core.telegram.org/bots/api#editmessagemedia",
-    "description": "Use this method to edit animation, audio, document, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit animation, audio, document, live photo, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -6314,7 +6605,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6370,7 +6661,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6462,7 +6753,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6507,9 +6798,9 @@ export const METHODS = [
       },
       {
         "name": "chat_id",
-        "typesLabel": "Integer",
+        "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat"
+        "description": "Unique identifier for the target chat or username of the target bot in the format @username"
       },
       {
         "name": "message_id",
@@ -6561,7 +6852,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6608,7 +6899,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -6717,7 +7008,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -6746,7 +7037,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_ids",
@@ -6766,6 +7057,84 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_ids\": []\n}'"
   },
   {
+    "name": "deleteMessageReaction",
+    "href": "https://core.telegram.org/bots/api#deletemessagereaction",
+    "description": "Use this method to remove a reaction from a message in a group or a supergroup chat. The bot must have the 'can_delete_messages' administrator right in the chat. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @username)"
+      },
+      {
+        "name": "message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the target message"
+      },
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the user whose reaction will be removed, if the reaction was added by a user"
+      },
+      {
+        "name": "actor_chat_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the chat whose reaction will be removed, if the reaction was added by a chat"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "message_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "message_id": 123456789,
+      "user_id": 123456789,
+      "actor_chat_id": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMessageReaction\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
+  },
+  {
+    "name": "deleteAllMessageReactions",
+    "href": "https://core.telegram.org/bots/api#deleteallmessagereactions",
+    "description": "Use this method to remove up to 10000 recent reactions in a group or a supergroup chat added by a given user or chat. The bot must have the 'can_delete_messages' administrator right in the chat. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @username)"
+      },
+      {
+        "name": "user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the user whose reactions will be removed, if the reactions were added by a user"
+      },
+      {
+        "name": "actor_chat_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the chat whose reactions will be removed, if the reactions were added by a chat"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "user_id": 123456789,
+      "actor_chat_id": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteAllMessageReactions\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
+  },
+  {
     "name": "sendSticker",
     "href": "https://core.telegram.org/bots/api#sendsticker",
     "description": "Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers. On success, the sent Message is returned.",
@@ -6781,7 +7150,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -6823,7 +7192,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -7415,7 +7784,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -7571,7 +7940,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
@@ -8037,9 +8406,9 @@ export const METHODS = [
       },
       {
         "name": "chat_id",
-        "typesLabel": "Integer",
+        "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat. Games can't be sent to channel direct messages chats and channel chats."
+        "description": "Unique identifier for the target chat or username of the target bot in the format @username. Games can't be sent to channel direct messages chats and channel chats."
       },
       {
         "name": "message_thread_id",
@@ -8069,7 +8438,7 @@ export const METHODS = [
         "name": "allow_paid_broadcast",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance"
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
       },
       {
         "name": "message_effect_id",
