@@ -57,7 +57,7 @@ export const METHODS = [
         "name": "url",
         "typesLabel": "String",
         "required": true,
-        "description": "HTTPS URL to send updates to. Use an empty string to remove webhook integration"
+        "description": "HTTPS URL to send updates to. Use an empty string to remove webhook integration."
       },
       {
         "name": "certificate",
@@ -263,7 +263,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -486,7 +486,7 @@ export const METHODS = [
         "name": "caption",
         "typesLabel": "String",
         "required": false,
-        "description": "New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept"
+        "description": "New caption for media, 0-1024 characters after entities parsing. If not specified, the original caption is kept."
       },
       {
         "name": "parse_mode",
@@ -546,7 +546,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -753,7 +753,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1041,7 +1041,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1177,7 +1177,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1353,7 +1353,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1518,7 +1518,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1650,7 +1650,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1711,7 +1711,7 @@ export const METHODS = [
         "name": "video_note",
         "typesLabel": "InputFile | String",
         "required": true,
-        "description": "Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending video notes by a URL is currently unsupported"
+        "description": "Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending video notes by a URL is currently unsupported."
       },
       {
         "name": "duration",
@@ -1771,7 +1771,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -1903,7 +1903,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -2069,7 +2069,7 @@ export const METHODS = [
         "name": "live_period",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Period in seconds during which the location will be updated (see Live Locations, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely."
+        "description": "Period in seconds during which the location will be updated (see Live Locations, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely"
       },
       {
         "name": "heading",
@@ -2123,7 +2123,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -2270,7 +2270,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -2397,7 +2397,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -2458,13 +2458,13 @@ export const METHODS = [
         "name": "question_parse_mode",
         "typesLabel": "String",
         "required": false,
-        "description": "Mode for parsing entities in the question. See formatting options for more details. Currently, only custom emoji entities are allowed"
+        "description": "Mode for parsing entities in the question. See formatting options for more details. Currently, only custom emoji entities are allowed."
       },
       {
         "name": "question_entities",
         "typesLabel": "Array of MessageEntity",
         "required": false,
-        "description": "A JSON-serialized list of special entities that appear in the poll question. It can be specified instead of question_parse_mode"
+        "description": "A JSON-serialized list of special entities that appear in the poll question. It can be specified instead of question_parse_mode."
       },
       {
         "name": "options",
@@ -2524,7 +2524,7 @@ export const METHODS = [
         "name": "country_codes",
         "typesLabel": "Array of String",
         "required": false,
-        "description": "A JSON-serialized list of 0-12 two-letter ISO 3166-1 alpha-2 country codes indicating the countries from which users can vote in the poll; for channel chats only. If omitted or empty, then users from any country can participate in the poll."
+        "description": "A JSON-serialized list of 0-12 two-letter ISO 3166-1 alpha-2 country codes indicating the countries from which users can vote in the poll; for channel chats only. Use \"FT\" as a country code to allow users with anonymous numbers to vote. If omitted or empty, then users from any country can participate in the poll."
       },
       {
         "name": "correct_option_ids",
@@ -2548,7 +2548,7 @@ export const METHODS = [
         "name": "explanation_entities",
         "typesLabel": "Array of MessageEntity",
         "required": false,
-        "description": "A JSON-serialized list of special entities that appear in the poll explanation. It can be specified instead of explanation_parse_mode"
+        "description": "A JSON-serialized list of special entities that appear in the poll explanation. It can be specified instead of explanation_parse_mode."
       },
       {
         "name": "explanation_media",
@@ -2632,7 +2632,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -2784,7 +2784,7 @@ export const METHODS = [
         "name": "emoji",
         "typesLabel": "String",
         "required": false,
-        "description": "Emoji on which the dice throw animation is based. Currently, must be one of \"🎲\", \"🎯\", \"🏀\", \"⚽\", \"🎳\", or \"🎰\". Dice can have values 1-6 for \"🎲\", \"🎯\" and \"🎳\", values 1-5 for \"🏀\" and \"⚽\", and values 1-64 for \"🎰\". Defaults to \"🎲\""
+        "description": "Emoji on which the dice throw animation is based. Currently, must be one of \"🎲\", \"🎯\", \"🏀\", \"⚽\", \"🎳\", or \"🎰\". Dice can have values 1-6 for \"🎲\", \"🎯\" and \"🎳\", values 1-5 for \"🏀\" and \"⚽\", and values 1-64 for \"🎰\". Defaults to \"🎲\"."
       },
       {
         "name": "disable_notification",
@@ -2826,7 +2826,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -3230,7 +3230,7 @@ export const METHODS = [
         "name": "until_date",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Date when restrictions will be lifted for the user; Unix time. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever"
+        "description": "Date when restrictions will be lifted for the user; Unix time. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever."
       }
     ],
     "jsonRequired": {
@@ -3293,7 +3293,7 @@ export const METHODS = [
         "name": "can_restrict_members",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the administrator can restrict, ban or unban chat members, or access supergroup statistics. For backward compatibility, defaults to True for promotions of channel administrators"
+        "description": "Pass True if the administrator can restrict, ban or unban chat members, or access supergroup statistics. For backward compatibility, defaults to True for promotions of channel administrators."
       },
       {
         "name": "can_promote_members",
@@ -3617,7 +3617,7 @@ export const METHODS = [
         "name": "creates_join_request",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "True, if users joining the chat via the link need to be approved by chat administrators. If True, member_limit can't be specified"
+        "description": "True, if users joining the chat via the link need to be approved by chat administrators. If True, member_limit can't be specified."
       }
     ],
     "jsonRequired": {
@@ -3672,7 +3672,7 @@ export const METHODS = [
         "name": "creates_join_request",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "True, if users joining the chat via the link need to be approved by chat administrators. If True, member_limit can't be specified"
+        "description": "True, if users joining the chat via the link need to be approved by chat administrators. If True, member_limit can't be specified."
       }
     ],
     "jsonRequired": {
@@ -4293,7 +4293,7 @@ export const METHODS = [
         "name": "icon_color",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Color of the topic icon in RGB format. Currently, must be one of 7322096 (0x6FB9F0), 16766590 (0xFFD67E), 13338331 (0xCB86DB), 9367192 (0x8EEE98), 16749490 (0xFF93B2), or 16478047 (0xFB6F5F)"
+        "description": "Color of the topic icon in RGB format. Currently, must be one of 7322096 (0x6FB9F0), 16766590 (0xFFD67E), 13338331 (0xCB86DB), 9367192 (0x8EEE98), 16749490 (0xFF93B2), or 16478047 (0xFB6F5F)."
       },
       {
         "name": "icon_custom_emoji_id",
@@ -4336,13 +4336,13 @@ export const METHODS = [
         "name": "name",
         "typesLabel": "String",
         "required": false,
-        "description": "New topic name, 0-128 characters. If not specified or empty, the current name of the topic will be kept"
+        "description": "New topic name, 0-128 characters. If not specified or empty, the current name of the topic will be kept."
       },
       {
         "name": "icon_custom_emoji_id",
         "typesLabel": "String",
         "required": false,
-        "description": "New unique identifier of the custom emoji shown as the topic icon. Use getForumTopicIconStickers to get all allowed custom emoji identifiers. Pass an empty string to remove the icon. If not specified, the current icon will be kept"
+        "description": "New unique identifier of the custom emoji shown as the topic icon. Use getForumTopicIconStickers to get all allowed custom emoji identifiers. Pass an empty string to remove the icon. If not specified, the current icon will be kept."
       }
     ],
     "jsonRequired": {
@@ -4623,7 +4623,7 @@ export const METHODS = [
         "name": "text",
         "typesLabel": "String",
         "required": false,
-        "description": "Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters"
+        "description": "Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters."
       },
       {
         "name": "show_alert",
@@ -4856,7 +4856,7 @@ export const METHODS = [
         "name": "language_code",
         "typesLabel": "String",
         "required": false,
-        "description": "A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands"
+        "description": "A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands."
       }
     ],
     "jsonRequired": {
@@ -4885,7 +4885,7 @@ export const METHODS = [
         "name": "language_code",
         "typesLabel": "String",
         "required": false,
-        "description": "A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands"
+        "description": "A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands."
       }
     ],
     "jsonRequired": {},
@@ -5097,13 +5097,13 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be changed"
+        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be changed."
       },
       {
         "name": "menu_button",
         "typesLabel": "MenuButton",
         "required": false,
-        "description": "A JSON-serialized object for the bot's new menu button. Defaults to MenuButtonDefault"
+        "description": "A JSON-serialized object for the bot's new menu button. Defaults to MenuButtonDefault."
       }
     ],
     "jsonRequired": {},
@@ -5123,7 +5123,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be returned"
+        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be returned."
       }
     ],
     "jsonRequired": {},
@@ -5459,7 +5459,7 @@ export const METHODS = [
         "name": "message_ids",
         "typesLabel": "Array of Integer",
         "required": true,
-        "description": "A JSON-serialized list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See deleteMessage for limitations on which messages can be deleted"
+        "description": "A JSON-serialized list of 1-100 identifiers of messages to delete. All messages must be from the same chat. See deleteMessage for limitations on which messages can be deleted."
       }
     ],
     "jsonRequired": {
@@ -5785,7 +5785,7 @@ export const METHODS = [
         "name": "limit",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100"
+        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100."
       }
     ],
     "jsonRequired": {
@@ -5864,7 +5864,7 @@ export const METHODS = [
         "name": "limit",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100"
+        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100."
       }
     ],
     "jsonRequired": {
@@ -5953,7 +5953,7 @@ export const METHODS = [
         "name": "limit",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100"
+        "description": "The maximum number of gifts to be returned; 1-100. Defaults to 100."
       }
     ],
     "jsonRequired": {
@@ -6424,7 +6424,7 @@ export const METHODS = [
         "name": "button",
         "typesLabel": "KeyboardButton",
         "required": true,
-        "description": "A JSON-serialized object describing the button to be saved. The button must be of the type request_users, request_chat, or request_managed_bot"
+        "description": "A JSON-serialized object describing the button to be saved. The button must be of the type request_users, request_chat, or request_managed_bot."
       }
     ],
     "jsonRequired": {
@@ -6459,13 +6459,13 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message to edit"
+        "description": "Required if inline_message_id is not specified. Identifier of the message to edit."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "text",
@@ -6495,7 +6495,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for an inline keyboard."
+        "description": "A JSON-serialized object for an inline keyboard"
       }
     ],
     "jsonRequired": {
@@ -6536,13 +6536,13 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message to edit"
+        "description": "Required if inline_message_id is not specified. Identifier of the message to edit."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "caption",
@@ -6572,7 +6572,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for an inline keyboard."
+        "description": "A JSON-serialized object for an inline keyboard"
       }
     ],
     "jsonRequired": {},
@@ -6611,13 +6611,13 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message to edit"
+        "description": "Required if inline_message_id is not specified. Identifier of the message to edit."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "media",
@@ -6629,7 +6629,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for a new inline keyboard."
+        "description": "A JSON-serialized object for a new inline keyboard"
       }
     ],
     "jsonRequired": {
@@ -6667,13 +6667,13 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message to edit"
+        "description": "Required if inline_message_id is not specified. Identifier of the message to edit."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "latitude",
@@ -6691,7 +6691,7 @@ export const METHODS = [
         "name": "live_period",
         "typesLabel": "Integer",
         "required": false,
-        "description": "New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current live_period by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then live_period remains unchanged"
+        "description": "New period in seconds during which the location can be updated, starting from the message send date. If 0x7FFFFFFF is specified, then the location can be updated forever. Otherwise, the new value must not exceed the current live_period by more than a day, and the live location expiration date must remain within the next 90 days. If not specified, then live_period remains unchanged."
       },
       {
         "name": "horizontal_accuracy",
@@ -6715,7 +6715,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for a new inline keyboard."
+        "description": "A JSON-serialized object for a new inline keyboard"
       }
     ],
     "jsonRequired": {
@@ -6759,19 +6759,19 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message with live location to stop"
+        "description": "Required if inline_message_id is not specified. Identifier of the message with live location to stop."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for a new inline keyboard."
+        "description": "A JSON-serialized object for a new inline keyboard"
       }
     ],
     "jsonRequired": {},
@@ -6858,19 +6858,19 @@ export const METHODS = [
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the message to edit"
+        "description": "Required if inline_message_id is not specified. Identifier of the message to edit."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       },
       {
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for an inline keyboard."
+        "description": "A JSON-serialized object for an inline keyboard"
       }
     ],
     "jsonRequired": {},
@@ -6911,7 +6911,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
-        "description": "A JSON-serialized object for a new message inline keyboard."
+        "description": "A JSON-serialized object for a new message inline keyboard"
       }
     ],
     "jsonRequired": {
@@ -6948,7 +6948,7 @@ export const METHODS = [
         "name": "send_date",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Point in time (Unix timestamp) when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future"
+        "description": "Point in time (Unix timestamp) when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future."
       }
     ],
     "jsonRequired": {
@@ -7043,7 +7043,7 @@ export const METHODS = [
         "name": "message_ids",
         "typesLabel": "Array of Integer",
         "required": true,
-        "description": "A JSON-serialized list of 1-100 identifiers of messages to delete. See deleteMessage for limitations on which messages can be deleted"
+        "description": "A JSON-serialized list of 1-100 identifiers of messages to delete. See deleteMessage for limitations on which messages can be deleted."
       }
     ],
     "jsonRequired": {
@@ -7216,7 +7216,7 @@ export const METHODS = [
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
         "required": false,
-        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user"
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
       }
     ],
     "jsonRequired": {
@@ -7684,7 +7684,7 @@ export const METHODS = [
         "name": "custom_emoji_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Custom emoji identifier of a sticker from the sticker set; pass an empty string to drop the thumbnail and use the first sticker as the thumbnail."
+        "description": "Custom emoji identifier of a sticker from the sticker set; pass an empty string to drop the thumbnail and use the first sticker as the thumbnail"
       }
     ],
     "jsonRequired": {
@@ -7850,7 +7850,7 @@ export const METHODS = [
         "name": "start_parameter",
         "typesLabel": "String",
         "required": false,
-        "description": "Unique deep-linking parameter. If left empty, forwarded copies of the sent message will have a Pay button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a URL button with a deep link to the bot (instead of a Pay button), with the value used as the start parameter"
+        "description": "Unique deep-linking parameter. If left empty, forwarded copies of the sent message will have a Pay button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a URL button with a deep link to the bot (instead of a Pay button), with the value used as the start parameter."
       },
       {
         "name": "provider_data",
@@ -8499,7 +8499,7 @@ export const METHODS = [
         "name": "force",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters"
+        "description": "Pass True if the high score is allowed to decrease. This can be useful when fixing mistakes or banning cheaters."
       },
       {
         "name": "disable_edit_message",
@@ -8511,19 +8511,19 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat."
       },
       {
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the sent message"
+        "description": "Required if inline_message_id is not specified. Identifier of the sent message."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       }
     ],
     "jsonRequired": {
@@ -8557,19 +8557,19 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat"
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat."
       },
       {
         "name": "message_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Identifier of the sent message"
+        "description": "Required if inline_message_id is not specified. Identifier of the sent message."
       },
       {
         "name": "inline_message_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message"
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
       }
     ],
     "jsonRequired": {
