@@ -2921,7 +2921,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Channel chats and channel direct messages chats aren't supported."
+        "description": "Unique identifier for the target chat or username of the target bot or supergroup in the format @username. Channel chats and channel direct messages chats aren't supported."
       },
       {
         "name": "message_thread_id",
@@ -7066,7 +7066,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @username)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "message_id",
@@ -7109,7 +7109,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target supergroup (in the format @username)"
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
       },
       {
         "name": "user_id",
