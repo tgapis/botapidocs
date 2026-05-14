@@ -5097,7 +5097,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be changed."
+        "description": "Unique identifier for the target private chat. If not specified, the bot's default menu button will be changed."
       },
       {
         "name": "menu_button",
@@ -5123,7 +5123,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Unique identifier for the target private chat. If not specified, default bot's menu button will be returned."
+        "description": "Unique identifier for the target private chat. If not specified, the bot's default menu button will be returned."
       }
     ],
     "jsonRequired": {},
