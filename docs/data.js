@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 10.0",
-  "release_date": "May 8, 2026",
-  "changelog": "https://core.telegram.org/bots/api#may-8-2026"
+  "version": "Bot API 10.1",
+  "release_date": "June 11, 2026",
+  "changelog": "https://core.telegram.org/bots/api#june-11-2026"
 };
 
 export const METHODS = [
@@ -3857,6 +3857,64 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/declineChatJoinRequest\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
+    "name": "answerChatJoinRequestQuery",
+    "href": "https://core.telegram.org/bots/api#answerchatjoinrequestquery",
+    "description": "Use this method to process a received chat join request query. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_join_request_query_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the join request query"
+      },
+      {
+        "name": "result",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Result of the query. Must be either \"approve\" to allow the user to join the chat, \"decline\" to disallow the user to join the chat, or \"queue\" to leave the decision to other administrators."
+      }
+    ],
+    "jsonRequired": {
+      "chat_join_request_query_id": "example",
+      "result": "example"
+    },
+    "jsonFull": {
+      "chat_join_request_query_id": "example",
+      "result": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerChatJoinRequestQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_join_request_query_id\": \"example\",\n  \"result\": \"example\"\n}'"
+  },
+  {
+    "name": "sendChatJoinRequestWebApp",
+    "href": "https://core.telegram.org/bots/api#sendchatjoinrequestwebapp",
+    "description": "Use this method to process a received chat join request query by showing a Mini App to the user before deciding the outcome. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_join_request_query_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the join request query"
+      },
+      {
+        "name": "web_app_url",
+        "typesLabel": "String",
+        "required": true,
+        "description": "The URL of the Mini App to be opened"
+      }
+    ],
+    "jsonRequired": {
+      "chat_join_request_query_id": "example",
+      "web_app_url": "example"
+    },
+    "jsonFull": {
+      "chat_join_request_query_id": "example",
+      "web_app_url": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendChatJoinRequestWebApp\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_join_request_query_id\": \"example\",\n  \"web_app_url\": \"example\"\n}'"
+  },
+  {
     "name": "setChatPhoto",
     "href": "https://core.telegram.org/bots/api#setchatphoto",
     "description": "Use this method to set a new profile photo for the chat. Photos can't be changed for private chats. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns True on success.",
@@ -6440,7 +6498,7 @@ export const METHODS = [
   {
     "name": "editMessageText",
     "href": "https://core.telegram.org/bots/api#editmessagetext",
-    "description": "Use this method to edit text and game messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit text, rich and game messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -6470,8 +6528,8 @@ export const METHODS = [
       {
         "name": "text",
         "typesLabel": "String",
-        "required": true,
-        "description": "New text of the message, 1-4096 characters after entities parsing"
+        "required": false,
+        "description": "New text of the message, 1-4096 characters after entity parsing; required if rich_message isn't specified"
       },
       {
         "name": "parse_mode",
@@ -6492,15 +6550,19 @@ export const METHODS = [
         "description": "Link preview generation options for the message"
       },
       {
+        "name": "rich_message",
+        "typesLabel": "InputRichMessage",
+        "required": false,
+        "description": "New rich content of the message; required if text isn't specified"
+      },
+      {
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
         "description": "A JSON-serialized object for an inline keyboard"
       }
     ],
-    "jsonRequired": {
-      "text": "example"
-    },
+    "jsonRequired": {},
     "jsonFull": {
       "business_connection_id": "example",
       "chat_id": 123456789,
@@ -6510,9 +6572,10 @@ export const METHODS = [
       "parse_mode": "example",
       "entities": [],
       "link_preview_options": {},
+      "rich_message": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "editMessageCaption",
@@ -6592,7 +6655,7 @@ export const METHODS = [
   {
     "name": "editMessageMedia",
     "href": "https://core.telegram.org/bots/api#editmessagemedia",
-    "description": "Use this method to edit animation, audio, document, live photo, photo, or video messages, or to add media to text messages. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit animation, audio, document, live photo, photo, or video messages, or to replace a text or a rich message with a media. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7716,6 +7779,149 @@ export const METHODS = [
       "name": "example"
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteStickerSet\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
+  },
+  {
+    "name": "sendRichMessage",
+    "href": "https://core.telegram.org/bots/api#sendrichmessage",
+    "description": "Use this method to send rich messages. If the message contains a block with a media element, then the bot must have the right to send the media to the chat. On success, the sent Message is returned.",
+    "returns": "Message",
+    "params": [
+      {
+        "name": "business_connection_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the business connection on behalf of which the message will be sent"
+      },
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+      },
+      {
+        "name": "message_thread_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only"
+      },
+      {
+        "name": "direct_messages_topic_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "rich_message",
+        "typesLabel": "InputRichMessage",
+        "required": true,
+        "description": "The message to be sent"
+      },
+      {
+        "name": "disable_notification",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Sends the message silently. Users will receive a notification with no sound."
+      },
+      {
+        "name": "protect_content",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Protects the contents of the sent message from forwarding and saving"
+      },
+      {
+        "name": "allow_paid_broadcast",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
+      },
+      {
+        "name": "message_effect_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the message effect to be added to the message; for private chats only"
+      },
+      {
+        "name": "suggested_post_parameters",
+        "typesLabel": "SuggestedPostParameters",
+        "required": false,
+        "description": "A JSON-serialized object containing the parameters of the suggested post to send; for direct messages chats only. If the message is sent as a reply to another suggested post, then that suggested post is automatically declined."
+      },
+      {
+        "name": "reply_parameters",
+        "typesLabel": "ReplyParameters",
+        "required": false,
+        "description": "Description of the message to reply to"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
+        "required": false,
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "rich_message": {}
+    },
+    "jsonFull": {
+      "business_connection_id": "example",
+      "chat_id": 123456789,
+      "message_thread_id": 123456789,
+      "direct_messages_topic_id": 123456789,
+      "rich_message": {},
+      "disable_notification": false,
+      "protect_content": false,
+      "allow_paid_broadcast": false,
+      "message_effect_id": "example",
+      "suggested_post_parameters": {},
+      "reply_parameters": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendRichMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"rich_message\": {}\n}'"
+  },
+  {
+    "name": "sendRichMessageDraft",
+    "href": "https://core.telegram.org/bots/api#sendrichmessagedraft",
+    "description": "Use this method to stream a partial rich message to a user while the message is being generated. Note that the streamed draft is ephemeral and acts as a temporary 30-second preview - once the output is finalized, you must call sendRichMessage with the complete message to persist it in the user's chat. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Unique identifier for the target private chat"
+      },
+      {
+        "name": "message_thread_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Unique identifier for the target message thread"
+      },
+      {
+        "name": "draft_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated."
+      },
+      {
+        "name": "rich_message",
+        "typesLabel": "InputRichMessage",
+        "required": true,
+        "description": "The partial message to be streamed"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "draft_id": 123456789,
+      "rich_message": {}
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "message_thread_id": 123456789,
+      "draft_id": 123456789,
+      "rich_message": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendRichMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789,\n  \"rich_message\": {}\n}'"
   },
   {
     "name": "answerInlineQuery",
