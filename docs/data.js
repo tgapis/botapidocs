@@ -2870,7 +2870,7 @@ export const METHODS = [
         "name": "draft_id",
         "typesLabel": "Integer",
         "required": true,
-        "description": "Unique identifier of the message draft; must be non-zero. Changes of drafts with the same identifier are animated."
+        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated."
       },
       {
         "name": "text",
