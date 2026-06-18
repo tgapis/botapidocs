@@ -3888,7 +3888,7 @@ export const METHODS = [
   {
     "name": "sendChatJoinRequestWebApp",
     "href": "https://core.telegram.org/bots/api#sendchatjoinrequestwebapp",
-    "description": "Use this method to process a received chat join request query by showing a Mini App to the user before deciding the outcome. Returns True on success.",
+    "description": "Use this method to process a received chat join request query by showing a Mini App to the user before deciding the outcome. Call answerChatJoinRequestQuery to resolve the join request query based on the user interaction with the Mini App. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -7790,7 +7790,7 @@ export const METHODS = [
         "name": "business_connection_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Unique identifier of the business connection on behalf of which the message will be sent"
+        "description": "Unique identifier of the business connection on behalf of which the message will be sent. Bot can send rich messages on behalf of a business account only if the corresponding user can send rich messages."
       },
       {
         "name": "chat_id",
