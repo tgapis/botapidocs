@@ -6686,7 +6686,7 @@ export const METHODS = [
         "name": "media",
         "typesLabel": "InputMedia",
         "required": true,
-        "description": "A JSON-serialized object for a new media content of the message"
+        "description": "A JSON-serialized object for the new media content of the message"
       },
       {
         "name": "reply_markup",
