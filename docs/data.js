@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 10.1",
-  "release_date": "June 11, 2026",
-  "changelog": "https://core.telegram.org/bots/api#june-11-2026"
+  "version": "Bot API 10.2",
+  "release_date": "July 14, 2026",
+  "changelog": "https://core.telegram.org/bots/api#july-14-2026"
 };
 
 export const METHODS = [
@@ -200,6 +200,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "text",
         "typesLabel": "String",
         "required": true,
@@ -275,6 +287,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "text": "example",
       "parse_mode": "example",
       "entities": [],
@@ -378,7 +392,7 @@ export const METHODS = [
   {
     "name": "forwardMessages",
     "href": "https://core.telegram.org/bots/api#forwardmessages",
-    "description": "Use this method to forward multiple messages of any kind. If some of the specified messages can't be found or forwarded, they are skipped. Service messages and messages with protected content can't be forwarded. Album grouping is kept for forwarded messages. On success, an array of MessageId of the sent messages is returned.",
+    "description": "Use this method to forward multiple messages of any kind. If some of the specified messages can't be found or forwarded, they are skipped. Service messages and messages with protected content can't be forwarded. Album grouping is kept for forwarded messages. On success, an Array of MessageId of the sent messages is returned.",
     "returns": "Array of MessageId",
     "params": [
       {
@@ -504,7 +518,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media. Ignored if a new caption isn't specified."
+        "description": "Pass True if the caption must be shown above the message media. Ignored if a new caption isn't specified."
       },
       {
         "name": "disable_notification",
@@ -578,7 +592,7 @@ export const METHODS = [
   {
     "name": "copyMessages",
     "href": "https://core.telegram.org/bots/api#copymessages",
-    "description": "Use this method to copy messages of any kind. If some of the specified messages can't be found or copied, they are skipped. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_id is known to the bot. The method is analogous to the method forwardMessages, but the copied messages don't have a link to the original message. Album grouping is kept for copied messages. On success, an array of MessageId of the sent messages is returned.",
+    "description": "Use this method to copy messages of any kind. If some of the specified messages can't be found or copied, they are skipped. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_id is known to the bot. The method is analogous to the method forwardMessages, but the copied messages don't have a link to the original message. Album grouping is kept for copied messages. On success, an Array of MessageId of the sent messages is returned.",
     "returns": "Array of MessageId",
     "params": [
       {
@@ -678,6 +692,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "photo",
         "typesLabel": "InputFile | String",
         "required": true,
@@ -705,7 +731,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media"
+        "description": "Pass True if the caption must be shown above the message media"
       },
       {
         "name": "has_spoiler",
@@ -765,6 +791,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "photo": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -812,6 +840,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "live_photo",
         "typesLabel": "InputFile | String",
         "required": true,
@@ -845,7 +885,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media"
+        "description": "Pass True if the caption must be shown above the message media"
       },
       {
         "name": "has_spoiler",
@@ -906,6 +946,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "live_photo": "https://example.com/file.jpg",
       "photo": "https://example.com/file.jpg",
       "caption": "example",
@@ -952,6 +994,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "audio",
@@ -1053,6 +1107,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "audio": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -1100,6 +1156,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "document",
@@ -1189,6 +1257,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "document": "https://example.com/file.jpg",
       "thumbnail": "https://example.com/file.jpg",
       "caption": "example",
@@ -1234,6 +1304,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "video",
@@ -1299,7 +1381,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media"
+        "description": "Pass True if the caption must be shown above the message media"
       },
       {
         "name": "has_spoiler",
@@ -1365,6 +1447,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "video": "https://example.com/file.jpg",
       "duration": 123456789,
       "width": 123456789,
@@ -1419,6 +1503,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "animation",
         "typesLabel": "InputFile | String",
         "required": true,
@@ -1470,7 +1566,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media"
+        "description": "Pass True if the caption must be shown above the message media"
       },
       {
         "name": "has_spoiler",
@@ -1530,6 +1626,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "animation": "https://example.com/file.jpg",
       "duration": 123456789,
       "width": 123456789,
@@ -1579,6 +1677,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "voice",
@@ -1662,6 +1772,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "voice": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -1706,6 +1818,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "video_note",
@@ -1783,6 +1907,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "video_note": "https://example.com/file.jpg",
       "duration": 123456789,
       "length": 123456789,
@@ -1837,7 +1963,7 @@ export const METHODS = [
         "name": "media",
         "typesLabel": "Array of InputPaidMedia",
         "required": true,
-        "description": "A JSON-serialized array describing the media to be sent; up to 10 items"
+        "description": "A JSON-serialized Array describing the media to be sent; up to 10 items"
       },
       {
         "name": "payload",
@@ -1867,7 +1993,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media"
+        "description": "Pass True if the caption must be shown above the message media"
       },
       {
         "name": "disable_notification",
@@ -1935,7 +2061,7 @@ export const METHODS = [
   {
     "name": "sendMediaGroup",
     "href": "https://core.telegram.org/bots/api#sendmediagroup",
-    "description": "Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an array of Message objects that were sent is returned.",
+    "description": "Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an Array of Message objects that were sent is returned.",
     "returns": "Array of Message",
     "params": [
       {
@@ -1966,7 +2092,7 @@ export const METHODS = [
         "name": "media",
         "typesLabel": "Array of InputMediaAudio | Array of InputMediaDocument | Array of InputMediaLivePhoto | Array of InputMediaPhoto | Array of InputMediaVideo",
         "required": true,
-        "description": "A JSON-serialized array describing messages to be sent, must include 2-10 items"
+        "description": "A JSON-serialized Array describing messages to be sent, must include 2-10 items"
       },
       {
         "name": "disable_notification",
@@ -2048,6 +2174,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "latitude",
         "typesLabel": "Float",
         "required": true,
@@ -2069,7 +2207,7 @@ export const METHODS = [
         "name": "live_period",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Period in seconds during which the location will be updated (see Live Locations, should be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely"
+        "description": "Period in seconds during which the location will be updated (see Live Locations), must be between 60 and 86400, or 0x7FFFFFFF for live locations that can be edited indefinitely. Must be 0 for ephemeral messages."
       },
       {
         "name": "heading",
@@ -2136,6 +2274,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "latitude": 0.1,
       "longitude": 0.1,
       "horizontal_accuracy": 0.1,
@@ -2181,6 +2321,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "latitude",
@@ -2285,6 +2437,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "latitude": 0.1,
       "longitude": 0.1,
       "title": "example",
@@ -2332,6 +2486,18 @@ export const METHODS = [
         "typesLabel": "Integer",
         "required": false,
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
       },
       {
         "name": "phone_number",
@@ -2410,6 +2576,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "phone_number": "example",
       "first_name": "example",
       "last_name": "example",
@@ -2488,37 +2656,37 @@ export const METHODS = [
         "name": "allows_multiple_answers",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the poll allows multiple answers, defaults to False"
+        "description": "Pass True if the poll allows multiple answers, defaults to False"
       },
       {
         "name": "allows_revoting",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the poll allows to change chosen answer options, defaults to False for quizzes and to True for regular polls"
+        "description": "Pass True if the poll allows to change chosen answer options, defaults to False for quizzes and to True for regular polls"
       },
       {
         "name": "shuffle_options",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the poll options must be shown in random order"
+        "description": "Pass True if the poll options must be shown in random order"
       },
       {
         "name": "allow_adding_options",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if answer options can be added to the poll after creation; not supported for anonymous polls and quizzes"
+        "description": "Pass True if answer options can be added to the poll after creation; not supported for anonymous polls and quizzes"
       },
       {
         "name": "hide_results_until_closes",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if poll results must be shown only after the poll closes"
+        "description": "Pass True if poll results must be shown only after the poll closes"
       },
       {
         "name": "members_only",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if voting is limited to users who have been members of the chat where the poll is being sent for more than 24 hours; for channel chats only"
+        "description": "Pass True if voting is limited to users who have been members of the chat where the poll is being sent for more than 24 hours; for channel chats only"
       },
       {
         "name": "country_codes",
@@ -3901,7 +4069,7 @@ export const METHODS = [
         "name": "web_app_url",
         "typesLabel": "String",
         "required": true,
-        "description": "The URL of the Mini App to be opened"
+        "description": "An HTTPS URL of a Web App to be opened with additional data as specified in Initializing Web Apps"
       }
     ],
     "jsonRequired": {
@@ -4193,7 +4361,7 @@ export const METHODS = [
   {
     "name": "getChatMemberCount",
     "href": "https://core.telegram.org/bots/api#getchatmembercount",
-    "description": "Use this method to get the number of members in a chat. Returns Int on success.",
+    "description": "Use this method to get the number of members in a chat. Returns Integer on success.",
     "returns": "Integer",
     "params": [
       {
@@ -4243,7 +4411,7 @@ export const METHODS = [
   {
     "name": "getUserPersonalChatMessages",
     "href": "https://core.telegram.org/bots/api#getuserpersonalchatmessages",
-    "description": "Use this method to get the last messages from the personal chat (i.e., the chat currently added to their profile) of a given user. On success, an array of Message objects is returned.",
+    "description": "Use this method to get the last messages from the personal chat (i.e., the chat currently added to their profile) of a given user. On success, an Array of Message objects is returned.",
     "returns": "Array of Message",
     "params": [
       {
@@ -4687,7 +4855,7 @@ export const METHODS = [
         "name": "show_alert",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "If True, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to false."
+        "description": "If True, an alert will be shown by the client instead of a notification at the top of the chat screen. Defaults to False."
       },
       {
         "name": "url",
@@ -4872,13 +5040,13 @@ export const METHODS = [
         "name": "is_access_restricted",
         "typesLabel": "Boolean",
         "required": true,
-        "description": "Pass True, if only selected users can access the bot. The bot's owner can always access it."
+        "description": "Pass True if only selected users can access the bot. The bot's owner can always access it."
       },
       {
         "name": "added_user_ids",
         "typesLabel": "Array of Integer",
         "required": false,
-        "description": "A JSON-serialized list of up to 10 identifiers of users who will have access to the bot in addition to its owner. Ignored if is_access_restricted is false."
+        "description": "A JSON-serialized list of up to 10 identifiers of users who will have access to the bot in addition to its owner. Ignored if is_access_restricted is False."
       }
     ],
     "jsonRequired": {
@@ -5702,7 +5870,7 @@ export const METHODS = [
         "name": "show_gift_button",
         "typesLabel": "Boolean",
         "required": true,
-        "description": "Pass True, if a button for sending a gift to the user or by the business account must always be shown in the input field"
+        "description": "Pass True if a button for sending a gift to the user or by the business account must always be shown in the input field"
       },
       {
         "name": "accepted_gift_types",
@@ -6553,7 +6721,7 @@ export const METHODS = [
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": false,
-        "description": "New rich content of the message; required if text isn't specified"
+        "description": "New rich content of the message; required if text isn't specified. Direct upload of new files isn't supported when an inline message is edited."
       },
       {
         "name": "reply_markup",
@@ -6629,7 +6797,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True, if the caption must be shown above the message media. Supported only for animation, photo and video messages."
+        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, photo and video messages."
       },
       {
         "name": "reply_markup",
@@ -6990,6 +7158,240 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/stopPoll\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789\n}'"
   },
   {
+    "name": "editEphemeralMessageText",
+    "href": "https://core.telegram.org/bots/api#editephemeralmessagetext",
+    "description": "Use this method to edit an ephemeral text message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the user who received the message"
+      },
+      {
+        "name": "ephemeral_message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the ephemeral message to edit"
+      },
+      {
+        "name": "text",
+        "typesLabel": "String",
+        "required": true,
+        "description": "New text of the message, 1-4096 characters after entity parsing"
+      },
+      {
+        "name": "parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the message text. See formatting options for more details."
+      },
+      {
+        "name": "entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in message text, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "link_preview_options",
+        "typesLabel": "LinkPreviewOptions",
+        "required": false,
+        "description": "Link preview generation options for the message"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup",
+        "required": false,
+        "description": "A JSON-serialized object for an inline keyboard"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "text": "example"
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "text": "example",
+      "parse_mode": "example",
+      "entities": [],
+      "link_preview_options": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789,\n  \"text\": \"example\"\n}'"
+  },
+  {
+    "name": "editEphemeralMessageMedia",
+    "href": "https://core.telegram.org/bots/api#editephemeralmessagemedia",
+    "description": "Use this method to edit the media of an ephemeral message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the user who received the message"
+      },
+      {
+        "name": "ephemeral_message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the ephemeral message to edit"
+      },
+      {
+        "name": "media",
+        "typesLabel": "InputMedia",
+        "required": true,
+        "description": "A JSON-serialized object for the new media content of the message. A new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL."
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup",
+        "required": false,
+        "description": "A JSON-serialized object for an inline keyboard"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "media": {}
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "media": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageMedia\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789,\n  \"media\": {}\n}'"
+  },
+  {
+    "name": "editEphemeralMessageCaption",
+    "href": "https://core.telegram.org/bots/api#editephemeralmessagecaption",
+    "description": "Use this method to edit the caption of an ephemeral message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the user who received the message"
+      },
+      {
+        "name": "ephemeral_message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the ephemeral message to edit"
+      },
+      {
+        "name": "caption",
+        "typesLabel": "String",
+        "required": false,
+        "description": "New caption of the message, 0-1024 characters after entities parsing"
+      },
+      {
+        "name": "parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the message caption. See formatting options for more details."
+      },
+      {
+        "name": "caption_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the caption, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup",
+        "required": false,
+        "description": "A JSON-serialized object for an inline keyboard"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "caption": "example",
+      "parse_mode": "example",
+      "caption_entities": [],
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageCaption\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789\n}'"
+  },
+  {
+    "name": "editEphemeralMessageReplyMarkup",
+    "href": "https://core.telegram.org/bots/api#editephemeralmessagereplymarkup",
+    "description": "Use this method to edit only the reply markup of an ephemeral message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the user who received the message"
+      },
+      {
+        "name": "ephemeral_message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the ephemeral message to edit"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup",
+        "required": false,
+        "description": "A JSON-serialized object for an inline keyboard"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789,
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageReplyMarkup\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789\n}'"
+  },
+  {
     "name": "approveSuggestedPost",
     "href": "https://core.telegram.org/bots/api#approvesuggestedpost",
     "description": "Use this method to approve a suggested post in a direct messages chat. The bot must have the 'can_post_messages' administrator right in the corresponding channel chat. Returns True on success.",
@@ -7120,6 +7522,43 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteMessages\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"message_ids\": []\n}'"
   },
   {
+    "name": "deleteEphemeralMessage",
+    "href": "https://core.telegram.org/bots/api#deleteephemeralmessage",
+    "description": "Use this method to delete an ephemeral message. Note that it is not guaranteed that the user will receive the message deletion event, especially if they are offline. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the user who received the message"
+      },
+      {
+        "name": "ephemeral_message_id",
+        "typesLabel": "Integer",
+        "required": true,
+        "description": "Identifier of the ephemeral message to delete"
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "receiver_user_id": 123456789,
+      "ephemeral_message_id": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteEphemeralMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789\n}'"
+  },
+  {
     "name": "deleteMessageReaction",
     "href": "https://core.telegram.org/bots/api#deletemessagereaction",
     "description": "Use this method to remove a reaction from a message in a group or a supergroup chat. The bot must have the 'can_delete_messages' administrator right in the chat. Returns True on success.",
@@ -7228,6 +7667,18 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "receiver_user_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
+      },
+      {
+        "name": "callback_query_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+      },
+      {
         "name": "sticker",
         "typesLabel": "InputFile | String",
         "required": true,
@@ -7291,6 +7742,8 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "receiver_user_id": 123456789,
+      "callback_query_id": "example",
       "sticker": "https://example.com/file.jpg",
       "emoji": "example",
       "disable_notification": false,
@@ -7907,7 +8360,7 @@ export const METHODS = [
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": true,
-        "description": "The partial message to be streamed"
+        "description": "The partial message to be streamed. Direct upload of new files isn't supported."
       }
     ],
     "jsonRequired": {
@@ -7939,7 +8392,7 @@ export const METHODS = [
         "name": "results",
         "typesLabel": "Array of InlineQueryResult",
         "required": true,
-        "description": "A JSON-serialized array of results for the inline query"
+        "description": "A JSON-serialized Array of results for the inline query"
       },
       {
         "name": "cache_time",
@@ -8050,7 +8503,7 @@ export const METHODS = [
         "name": "suggested_tip_amounts",
         "typesLabel": "Array of Integer",
         "required": false,
-        "description": "A JSON-serialized array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
+        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
       },
       {
         "name": "start_parameter",
@@ -8280,7 +8733,7 @@ export const METHODS = [
         "name": "suggested_tip_amounts",
         "typesLabel": "Array of Integer",
         "required": false,
-        "description": "A JSON-serialized array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
+        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
       },
       {
         "name": "provider_data",
@@ -8410,7 +8863,7 @@ export const METHODS = [
         "name": "shipping_options",
         "typesLabel": "Array of ShippingOption",
         "required": false,
-        "description": "Required if ok is True. A JSON-serialized array of available shipping options."
+        "description": "Required if ok is True. A JSON-serialized Array of available shipping options."
       },
       {
         "name": "error_message",
@@ -8585,7 +9038,7 @@ export const METHODS = [
         "name": "errors",
         "typesLabel": "Array of PassportElementError",
         "required": true,
-        "description": "A JSON-serialized array describing the errors"
+        "description": "A JSON-serialized Array describing the errors"
       }
     ],
     "jsonRequired": {
