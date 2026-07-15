@@ -209,7 +209,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "text",
@@ -701,7 +701,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "photo",
@@ -849,7 +849,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "live_photo",
@@ -1005,7 +1005,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "audio",
@@ -1167,7 +1167,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "document",
@@ -1315,7 +1315,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "video",
@@ -1512,7 +1512,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "animation",
@@ -1688,7 +1688,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "voice",
@@ -1829,7 +1829,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "video_note",
@@ -2183,7 +2183,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "latitude",
@@ -2332,7 +2332,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "latitude",
@@ -2497,7 +2497,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "phone_number",
@@ -7676,7 +7676,7 @@ export const METHODS = [
         "name": "callback_query_id",
         "typesLabel": "String",
         "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggerred the message if any"
+        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
       },
       {
         "name": "sticker",
