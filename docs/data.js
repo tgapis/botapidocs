@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 10.2",
-  "release_date": "July 14, 2026",
-  "changelog": "https://core.telegram.org/bots/api#july-14-2026"
+  "version": "Bot API 10.3",
+  "release_date": "August 24, 2026",
+  "changelog": "https://core.telegram.org/bots/api#august-24-2026"
 };
 
 export const METHODS = [
@@ -200,16 +200,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "text",
@@ -287,8 +281,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "text": "example",
       "parse_mode": "example",
       "entities": [],
@@ -692,16 +685,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "photo",
@@ -791,8 +778,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "photo": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -840,16 +826,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "live_photo",
@@ -946,8 +926,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "live_photo": "https://example.com/file.jpg",
       "photo": "https://example.com/file.jpg",
       "caption": "example",
@@ -996,16 +975,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "audio",
@@ -1107,8 +1080,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "audio": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -1158,16 +1130,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "document",
@@ -1257,8 +1223,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "document": "https://example.com/file.jpg",
       "thumbnail": "https://example.com/file.jpg",
       "caption": "example",
@@ -1306,16 +1271,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "video",
@@ -1447,8 +1406,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "video": "https://example.com/file.jpg",
       "duration": 123456789,
       "width": 123456789,
@@ -1503,16 +1461,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "animation",
@@ -1626,8 +1578,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "animation": "https://example.com/file.jpg",
       "duration": 123456789,
       "width": 123456789,
@@ -1679,16 +1630,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "voice",
@@ -1772,8 +1717,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "voice": "https://example.com/file.jpg",
       "caption": "example",
       "parse_mode": "example",
@@ -1792,7 +1736,7 @@ export const METHODS = [
   {
     "name": "sendVideoNote",
     "href": "https://core.telegram.org/bots/api#sendvideonote",
-    "description": "As of v.4.0, Telegram clients support rounded square MPEG4 videos of up to 1 minute long. Use this method to send video messages. On success, the sent Message is returned.",
+    "description": "Use this method to send a rounded square MPEG4 video of up to 1 minute long. On success, the sent Message is returned.",
     "returns": "Message",
     "params": [
       {
@@ -1820,16 +1764,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "video_note",
@@ -1907,8 +1845,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "video_note": "https://example.com/file.jpg",
       "duration": 123456789,
       "length": 123456789,
@@ -2174,16 +2111,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "latitude",
@@ -2274,8 +2205,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "latitude": 0.1,
       "longitude": 0.1,
       "horizontal_accuracy": 0.1,
@@ -2323,16 +2253,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "latitude",
@@ -2437,8 +2361,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "latitude": 0.1,
       "longitude": 0.1,
       "title": "example",
@@ -2488,16 +2411,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "phone_number",
@@ -2576,8 +2493,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "phone_number": "example",
       "first_name": "example",
       "last_name": "example",
@@ -3038,7 +2954,7 @@ export const METHODS = [
         "name": "draft_id",
         "typesLabel": "Integer",
         "required": true,
-        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated."
+        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated. Otherwise, the draft is replaced without animation."
       },
       {
         "name": "text",
@@ -3057,6 +2973,18 @@ export const METHODS = [
         "typesLabel": "Array of MessageEntity",
         "required": false,
         "description": "A JSON-serialized list of special entities that appear in message text, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "can_stop",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to show the user a button to stop further drafts. The bot will receive an Update \"stopped_message_generation\" if the user presses the button."
+      },
+      {
+        "name": "keep_on_stop",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to keep the draft in the chat when the button is pressed. The draft will still disappear after a short time or if the bot sends a message. To fully preserve the partial draft, the bot should send it as a new message."
       }
     ],
     "jsonRequired": {
@@ -3069,7 +2997,9 @@ export const METHODS = [
       "draft_id": 123456789,
       "text": "example",
       "parse_mode": "example",
-      "entities": []
+      "entities": [],
+      "can_stop": false,
+      "keep_on_stop": false
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789\n}'"
   },
@@ -3534,6 +3464,12 @@ export const METHODS = [
         "typesLabel": "Boolean",
         "required": false,
         "description": "Pass True if the administrator can edit the tags of regular members; for groups and supergroups only"
+      },
+      {
+        "name": "can_send_welcome_messages",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the administrator can manage chat welcome messages or directly send them in the case of bots"
       }
     ],
     "jsonRequired": {
@@ -3559,7 +3495,8 @@ export const METHODS = [
       "can_pin_messages": false,
       "can_manage_topics": false,
       "can_manage_direct_messages": false,
-      "can_manage_tags": false
+      "can_manage_tags": false,
+      "can_send_welcome_messages": false
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/promoteChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
@@ -4867,7 +4804,7 @@ export const METHODS = [
         "name": "cache_time",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum amount of time in seconds that the result of the callback query may be cached client-side. Telegram apps will support caching starting in version 3.14. Defaults to 0."
+        "description": "The maximum amount of time in seconds that the result of the callback query may be cached client-side. Defaults to 0."
       }
     ],
     "jsonRequired": {
@@ -6721,7 +6658,7 @@ export const METHODS = [
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": false,
-        "description": "New rich content of the message; required if text isn't specified. Direct upload of new files isn't supported when an inline message is edited."
+        "description": "New rich content of the message; required if text isn't specified. Direct upload of new files and explicit upload of files by a URL isn't supported when an inline message is edited."
       },
       {
         "name": "reply_markup",
@@ -7160,7 +7097,7 @@ export const METHODS = [
   {
     "name": "editEphemeralMessageText",
     "href": "https://core.telegram.org/bots/api#editephemeralmessagetext",
-    "description": "Use this method to edit an ephemeral text message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
+    "description": "Use this method to edit an ephemeral text or rich message. Note that it is not guaranteed that the user will receive the message edit event, especially if they are offline. On success, True is returned.",
     "returns": "Boolean",
     "params": [
       {
@@ -7184,8 +7121,8 @@ export const METHODS = [
       {
         "name": "text",
         "typesLabel": "String",
-        "required": true,
-        "description": "New text of the message, 1-4096 characters after entity parsing"
+        "required": false,
+        "description": "New text of the message, 1-4096 characters after entity parsing; required if rich_message isn't specified"
       },
       {
         "name": "parse_mode",
@@ -7198,6 +7135,12 @@ export const METHODS = [
         "typesLabel": "Array of MessageEntity",
         "required": false,
         "description": "A JSON-serialized list of special entities that appear in message text, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "rich_message",
+        "typesLabel": "InputRichMessage",
+        "required": false,
+        "description": "New rich content of the message; required if text isn't specified"
       },
       {
         "name": "link_preview_options",
@@ -7215,8 +7158,7 @@ export const METHODS = [
     "jsonRequired": {
       "chat_id": 123456789,
       "receiver_user_id": 123456789,
-      "ephemeral_message_id": 123456789,
-      "text": "example"
+      "ephemeral_message_id": 123456789
     },
     "jsonFull": {
       "chat_id": 123456789,
@@ -7225,10 +7167,11 @@ export const METHODS = [
       "text": "example",
       "parse_mode": "example",
       "entities": [],
+      "rich_message": {},
       "link_preview_options": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789,\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageText\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789\n}'"
   },
   {
     "name": "editEphemeralMessageMedia",
@@ -7258,7 +7201,7 @@ export const METHODS = [
         "name": "media",
         "typesLabel": "InputMedia",
         "required": true,
-        "description": "A JSON-serialized object for the new media content of the message. A new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL."
+        "description": "A JSON-serialized object for the new media content of the message"
       },
       {
         "name": "reply_markup",
@@ -7325,6 +7268,12 @@ export const METHODS = [
         "description": "A JSON-serialized list of special entities that appear in the caption, which can be specified instead of parse_mode"
       },
       {
+        "name": "show_caption_above_media",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, photo and video messages."
+      },
+      {
         "name": "reply_markup",
         "typesLabel": "InlineKeyboardMarkup",
         "required": false,
@@ -7343,6 +7292,7 @@ export const METHODS = [
       "caption": "example",
       "parse_mode": "example",
       "caption_entities": [],
+      "show_caption_above_media": false,
       "reply_markup": {}
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editEphemeralMessageCaption\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"receiver_user_id\": 123456789,\n  \"ephemeral_message_id\": 123456789\n}'"
@@ -7667,16 +7617,10 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
-        "name": "receiver_user_id",
-        "typesLabel": "Integer",
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
         "required": false,
-        "description": "For outgoing ephemeral messages, unique identifier of the user who will receive the message; for group and supergroup chats only. It is not guaranteed that the user will receive the message, especially if they are offline. See ephemeral message sending for more details."
-      },
-      {
-        "name": "callback_query_id",
-        "typesLabel": "String",
-        "required": false,
-        "description": "For outgoing ephemeral messages, identifier of the callback query which triggered the message if any"
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
       },
       {
         "name": "sticker",
@@ -7742,8 +7686,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
-      "receiver_user_id": 123456789,
-      "callback_query_id": "example",
+      "ephemeral_message_parameters": {},
       "sticker": "https://example.com/file.jpg",
       "emoji": "example",
       "disable_notification": false,
@@ -8264,6 +8207,12 @@ export const METHODS = [
         "description": "Identifier of the direct messages topic to which the message will be sent; required if the message is sent to a direct messages chat"
       },
       {
+        "name": "ephemeral_message_parameters",
+        "typesLabel": "EphemeralMessageParameters",
+        "required": false,
+        "description": "A JSON-serialized object containing the parameters of the ephemeral message to send"
+      },
+      {
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": true,
@@ -8321,6 +8270,7 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "direct_messages_topic_id": 123456789,
+      "ephemeral_message_parameters": {},
       "rich_message": {},
       "disable_notification": false,
       "protect_content": false,
@@ -8354,13 +8304,25 @@ export const METHODS = [
         "name": "draft_id",
         "typesLabel": "Integer",
         "required": true,
-        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated."
+        "description": "Unique identifier of the message draft; must be non-zero. Changes to drafts with the same identifier are animated. Otherwise, the draft is replaced without animation."
       },
       {
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": true,
-        "description": "The partial message to be streamed. Direct upload of new files isn't supported."
+        "description": "The partial message to be streamed. Direct upload of new files and explicit upload of files by a URL isn't supported."
+      },
+      {
+        "name": "can_stop",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to show the user a button to stop further drafts. The bot will receive an Update \"stopped_message_generation\" if the user presses the button."
+      },
+      {
+        "name": "keep_on_stop",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to keep the draft in the chat when the button is pressed. The draft will still disappear after a short time or if the bot sends a message. To fully preserve the partial draft, the bot should send it as a new message."
       }
     ],
     "jsonRequired": {
@@ -8372,7 +8334,9 @@ export const METHODS = [
       "chat_id": 123456789,
       "message_thread_id": 123456789,
       "draft_id": 123456789,
-      "rich_message": {}
+      "rich_message": {},
+      "can_stop": false,
+      "keep_on_stop": false
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendRichMessageDraft\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"draft_id\": 123456789,\n  \"rich_message\": {}\n}'"
   },
