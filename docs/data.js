@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 10.3",
-  "release_date": "August 24, 2026",
-  "changelog": "https://core.telegram.org/bots/api#august-24-2026"
+  "version": "Bot API 10.4",
+  "release_date": "November 9, 2026",
+  "changelog": "https://core.telegram.org/bots/api#november-9-2026"
 };
 
 export const METHODS = [
@@ -184,8 +184,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -273,7 +273,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "text": "example"
     },
     "jsonFull": {
@@ -294,7 +293,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"text\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"text\": \"example\"\n}'"
   },
   {
     "name": "forwardMessage",
@@ -306,7 +305,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -324,7 +323,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup or channel in the format @username)"
+        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup, or channel in the format @username)"
       },
       {
         "name": "video_start_timestamp",
@@ -392,7 +391,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -410,7 +409,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup or channel in the format @username)"
+        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup, or channel in the format @username)"
       },
       {
         "name": "message_ids",
@@ -450,14 +449,14 @@ export const METHODS = [
   {
     "name": "copyMessage",
     "href": "https://core.telegram.org/bots/api#copymessage",
-    "description": "Use this method to copy messages of any kind. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_ids is known to the bot. The method is analogous to the method forwardMessage, but the copied message doesn't have a link to the original message. Returns the MessageId of the sent message on success.",
+    "description": "Use this method to copy messages of any kind. Service messages, paid media messages, giveaway messages, giveaway winners messages, invoice messages, and widget messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_ids is known to the bot. The method is analogous to the method forwardMessage, but the copied message doesn't have a link to the original message. Returns the MessageId of the sent message on success.",
     "returns": "MessageId",
     "params": [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -475,7 +474,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup or channel in the format @username)"
+        "description": "Unique identifier for the chat where the original message was sent (or username of the target bot, supergroup, or channel in the format @username)"
       },
       {
         "name": "message_id",
@@ -585,14 +584,14 @@ export const METHODS = [
   {
     "name": "copyMessages",
     "href": "https://core.telegram.org/bots/api#copymessages",
-    "description": "Use this method to copy messages of any kind. If some of the specified messages can't be found or copied, they are skipped. Service messages, paid media messages, giveaway messages, giveaway winners messages, and invoice messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_ids is known to the bot. The method is analogous to the method forwardMessages, but the copied messages don't have a link to the original message. Album grouping is kept for copied messages. On success, an Array of MessageId of the sent messages is returned.",
+    "description": "Use this method to copy messages of any kind. If some of the specified messages can't be found or copied, they are skipped. Service messages, paid media messages, giveaway messages, giveaway winners messages, invoice messages, and widget messages can't be copied. A quiz poll can be copied only if the value of the field correct_option_ids is known to the bot. The method is analogous to the method forwardMessages, but the copied messages don't have a link to the original message. Album grouping is kept for copied messages. On success, an Array of MessageId of the sent messages is returned.",
     "returns": "Array of MessageId",
     "params": [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -610,7 +609,7 @@ export const METHODS = [
         "name": "from_chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup or channel in the format @username)"
+        "description": "Unique identifier for the chat where the original messages were sent (or username of the target bot, supergroup, or channel in the format @username)"
       },
       {
         "name": "message_ids",
@@ -669,8 +668,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -770,7 +769,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "photo": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -793,7 +791,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendPhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendLivePhoto",
@@ -810,8 +808,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target channel (in the format @channelusername)"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -917,7 +915,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "live_photo": "https://example.com/file.jpg",
       "photo": "https://example.com/file.jpg"
     },
@@ -942,7 +939,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLivePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"live_photo\": \"https://example.com/file.jpg\",\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLivePhoto\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"live_photo\": \"https://example.com/file.jpg\",\n  \"photo\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendAudio",
@@ -959,8 +956,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1072,7 +1069,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "audio": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1097,7 +1093,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAudio\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"audio\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAudio\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"audio\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendDocument",
@@ -1114,8 +1110,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1215,7 +1211,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "document": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1238,7 +1233,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendDocument\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"document\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendDocument\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"document\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVideo",
@@ -1255,8 +1250,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1398,7 +1393,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "video": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1428,7 +1422,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideo\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideo\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"video\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendAnimation",
@@ -1445,8 +1439,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1570,7 +1564,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "animation": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1597,7 +1590,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAnimation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"animation\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendAnimation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"animation\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVoice",
@@ -1614,8 +1607,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1709,7 +1702,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "voice": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1731,7 +1723,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVoice\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"voice\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVoice\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"voice\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "sendVideoNote",
@@ -1748,8 +1740,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -1837,7 +1829,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "video_note": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -1858,7 +1849,268 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideoNote\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"video_note\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVideoNote\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"video_note\": \"https://example.com/file.jpg\"\n}'"
+  },
+  {
+    "name": "sendWidget",
+    "href": "https://core.telegram.org/bots/api#sendwidget",
+    "description": "Use this method to send a message with an HTML widget. Currently, in the production environment, widgets can be sent only to private chats, and sent widgets automatically have protected content and therefore can't be forwarded. On success, the sent Message is returned.",
+    "returns": "Message",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "message_thread_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only"
+      },
+      {
+        "name": "html",
+        "typesLabel": "String",
+        "required": true,
+        "description": "HTML code of the widget, 1-32768 bytes. The code must not exceed 4096 bytes when compressed by zlib with the maximum compression level."
+      },
+      {
+        "name": "width",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Width of the widget in logical pixels; omit if the widget must occupy the whole width of the message bubble. The width is clamped by the app to the range from 200 to the maximum width of the message bubble."
+      },
+      {
+        "name": "height",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Height of the widget in logical pixels; omit if the height of the widget isn't fixed. The height is clamped by the app to the range 50-600."
+      },
+      {
+        "name": "public_data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Public data of the widget, 0-1024 bytes, which will be available wherever the widget is shown. If the widget is shared, then all messages with it will have the same public data."
+      },
+      {
+        "name": "chat_data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Data of the widget, which is specific to the message, 0-1024 bytes"
+      },
+      {
+        "name": "caption",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Widget caption, 0-1024 characters after entities parsing"
+      },
+      {
+        "name": "parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the widget caption. See formatting options for more details."
+      },
+      {
+        "name": "caption_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the caption, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "show_caption_above_media",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the caption must be shown above the widget"
+      },
+      {
+        "name": "allow_queries",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow the widget to send queries to the bot"
+      },
+      {
+        "name": "is_shared",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to create a shared widget, which can be sent again using the method sendSharedWidget"
+      },
+      {
+        "name": "disable_notification",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Sends the message silently. Users will receive a notification with no sound."
+      },
+      {
+        "name": "protect_content",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Protects the contents of the sent message from forwarding and saving"
+      },
+      {
+        "name": "allow_paid_broadcast",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
+      },
+      {
+        "name": "message_effect_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the message effect to be added to the message; for private chats only"
+      },
+      {
+        "name": "reply_parameters",
+        "typesLabel": "ReplyParameters",
+        "required": false,
+        "description": "Description of the message to reply to"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
+        "required": false,
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "html": "example"
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "message_thread_id": 123456789,
+      "html": "example",
+      "width": 123456789,
+      "height": 123456789,
+      "public_data": "example",
+      "chat_data": "example",
+      "caption": "example",
+      "parse_mode": "example",
+      "caption_entities": [],
+      "show_caption_above_media": false,
+      "allow_queries": false,
+      "is_shared": false,
+      "disable_notification": false,
+      "protect_content": false,
+      "allow_paid_broadcast": false,
+      "message_effect_id": "example",
+      "reply_parameters": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendWidget\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"html\": \"example\"\n}'"
+  },
+  {
+    "name": "sendSharedWidget",
+    "href": "https://core.telegram.org/bots/api#sendsharedwidget",
+    "description": "Use this method to send again a shared widget created by the bot. Currently, in the production environment, widgets can be sent only to private chats, and sent widgets automatically have protected content and therefore can't be forwarded. On success, the sent Message is returned.",
+    "returns": "Message",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": true,
+        "description": "Unique identifier for the target chat or username of the target supergroup in the format @username"
+      },
+      {
+        "name": "message_thread_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Unique identifier for the target message thread (topic) of a forum; for forum supergroups and private chats of bots with forum topic mode enabled only"
+      },
+      {
+        "name": "widget_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the shared widget"
+      },
+      {
+        "name": "chat_data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Data of the widget, which is specific to the message, 0-1024 bytes"
+      },
+      {
+        "name": "caption",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Widget caption, 0-1024 characters after entities parsing"
+      },
+      {
+        "name": "parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the widget caption. See formatting options for more details."
+      },
+      {
+        "name": "caption_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the caption, which can be specified instead of parse_mode"
+      },
+      {
+        "name": "show_caption_above_media",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True if the caption must be shown above the widget"
+      },
+      {
+        "name": "disable_notification",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Sends the message silently. Users will receive a notification with no sound."
+      },
+      {
+        "name": "protect_content",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Protects the contents of the sent message from forwarding and saving"
+      },
+      {
+        "name": "allow_paid_broadcast",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow up to 1000 messages per second, ignoring broadcasting limits for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance."
+      },
+      {
+        "name": "message_effect_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Unique identifier of the message effect to be added to the message; for private chats only"
+      },
+      {
+        "name": "reply_parameters",
+        "typesLabel": "ReplyParameters",
+        "required": false,
+        "description": "Description of the message to reply to"
+      },
+      {
+        "name": "reply_markup",
+        "typesLabel": "InlineKeyboardMarkup | ReplyKeyboardMarkup | ReplyKeyboardRemove | ForceReply",
+        "required": false,
+        "description": "Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user."
+      }
+    ],
+    "jsonRequired": {
+      "chat_id": 123456789,
+      "widget_id": "example"
+    },
+    "jsonFull": {
+      "chat_id": 123456789,
+      "message_thread_id": 123456789,
+      "widget_id": "example",
+      "chat_data": "example",
+      "caption": "example",
+      "parse_mode": "example",
+      "caption_entities": [],
+      "show_caption_above_media": false,
+      "disable_notification": false,
+      "protect_content": false,
+      "allow_paid_broadcast": false,
+      "message_effect_id": "example",
+      "reply_parameters": {},
+      "reply_markup": {}
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendSharedWidget\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"widget_id\": \"example\"\n}'"
   },
   {
     "name": "sendPaidMedia",
@@ -1876,7 +2128,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username. If the chat is a channel, all Telegram Star proceeds from this media will be credited to the chat's balance. Otherwise, they will be credited to the bot's balance."
       },
       {
         "name": "message_thread_id",
@@ -2011,7 +2263,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -2095,8 +2347,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -2196,7 +2448,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "latitude": 0.1,
       "longitude": 0.1
     },
@@ -2220,7 +2471,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLocation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendLocation\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"latitude\": 0.1,\n  \"longitude\": 0.1\n}'"
   },
   {
     "name": "sendVenue",
@@ -2237,8 +2488,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -2350,7 +2601,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "latitude": 0.1,
       "longitude": 0.1,
       "title": "example",
@@ -2378,7 +2628,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVenue\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"latitude\": 0.1,\n  \"longitude\": 0.1,\n  \"title\": \"example\",\n  \"address\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendVenue\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"latitude\": 0.1,\n  \"longitude\": 0.1,\n  \"title\": \"example\",\n  \"address\": \"example\"\n}'"
   },
   {
     "name": "sendContact",
@@ -2395,8 +2645,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -2484,7 +2734,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "phone_number": "example",
       "first_name": "example"
     },
@@ -2506,7 +2755,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendContact\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"phone_number\": \"example\",\n  \"first_name\": \"example\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendContact\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"phone_number\": \"example\",\n  \"first_name\": \"example\"\n}'"
   },
   {
     "name": "sendPoll",
@@ -2524,7 +2773,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Polls can't be sent to channel direct messages chats."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username. Polls can't be sent to channel direct messages chats."
       },
       {
         "name": "message_thread_id",
@@ -2850,7 +3099,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
@@ -3056,7 +3305,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -4346,6 +4595,16 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatMember\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"user_id\": 123456789\n}'"
   },
   {
+    "name": "getChatShareThemeBackdrops",
+    "href": "https://core.telegram.org/bots/api#getchatsharethemebackdrops",
+    "description": "Use this method to get the list of backdrops, which can be used as the background of a theme of the screen for sharing a link to a user or a chat. Requires no parameters. Returns a ChatShareThemeBackdrops object.",
+    "returns": "ChatShareThemeBackdrops",
+    "params": [],
+    "jsonRequired": {},
+    "jsonFull": {},
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatShareThemeBackdrops\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+  },
+  {
     "name": "getUserPersonalChatMessages",
     "href": "https://core.telegram.org/bots/api#getuserpersonalchatmessages",
     "description": "Use this method to get the last messages from the personal chat (i.e., the chat currently added to their profile) of a given user. On success, an Array of Message objects is returned.",
@@ -4437,7 +4696,7 @@ export const METHODS = [
   {
     "name": "createForumTopic",
     "href": "https://core.telegram.org/bots/api#createforumtopic",
-    "description": "Use this method to create a topic in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. Returns information about the created topic as a ForumTopic object.",
+    "description": "Use this method to create a topic in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. In the case of a private chat, a link to the topic can be created in the format https://t.me/<bot_username>/<message_thread_id>; the link opens the topic only for the user. Returns information about the created topic as a ForumTopic object.",
     "returns": "ForumTopic",
     "params": [
       {
@@ -4818,6 +5077,34 @@ export const METHODS = [
       "cache_time": 123456789
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerCallbackQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"callback_query_id\": \"example\"\n}'"
+  },
+  {
+    "name": "answerWidgetQuery",
+    "href": "https://core.telegram.org/bots/api#answerwidgetquery",
+    "description": "Use this method to send an answer to a query from a widget. The query must be answered within 15 seconds. The answer is received only by the widget that sent the query and doesn't change data of the widget; use editMessageWidgetData or editSharedWidgetData to change it. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "widget_query_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier for the query to be answered"
+      },
+      {
+        "name": "data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Data to be returned to the widget, 0-1024 bytes"
+      }
+    ],
+    "jsonRequired": {
+      "widget_query_id": "example"
+    },
+    "jsonFull": {
+      "widget_query_id": "example",
+      "data": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/answerWidgetQuery\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"widget_query_id\": \"example\"\n}'"
   },
   {
     "name": "answerGuestQuery",
@@ -5366,7 +5653,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if user_id is not specified. Unique identifier for the chat or username of the channel (in the format @username) that will receive the gift."
+        "description": "Required if user_id is not specified. Unique identifier for the chat that will receive the gift or username of the channel in the format @username."
       },
       {
         "name": "gift_id",
@@ -5488,6 +5775,18 @@ export const METHODS = [
         "typesLabel": "String",
         "required": false,
         "description": "Custom description for the verification; 0-70 characters. Must be empty if the organization isn't allowed to provide a custom verification description."
+      },
+      {
+        "name": "custom_description_parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the custom description. See formatting options for more details. Only \"text_link\" entities are supported."
+      },
+      {
+        "name": "custom_description_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the custom description, which can be specified instead of custom_description_parse_mode. Only \"text_link\" entities are supported."
       }
     ],
     "jsonRequired": {
@@ -5495,7 +5794,9 @@ export const METHODS = [
     },
     "jsonFull": {
       "user_id": 123456789,
-      "custom_description": "example"
+      "custom_description": "example",
+      "custom_description_parse_mode": "example",
+      "custom_description_entities": []
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/verifyUser\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789\n}'"
   },
@@ -5509,13 +5810,25 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username. Channel direct messages chats can't be verified."
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username. Channel direct messages chats can't be verified."
       },
       {
         "name": "custom_description",
         "typesLabel": "String",
         "required": false,
         "description": "Custom description for the verification; 0-70 characters. Must be empty if the organization isn't allowed to provide a custom verification description."
+      },
+      {
+        "name": "custom_description_parse_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode for parsing entities in the custom description. See formatting options for more details. Only \"text_link\" entities are supported."
+      },
+      {
+        "name": "custom_description_entities",
+        "typesLabel": "Array of MessageEntity",
+        "required": false,
+        "description": "A JSON-serialized list of special entities that appear in the custom description, which can be specified instead of custom_description_parse_mode. Only \"text_link\" entities are supported."
       }
     ],
     "jsonRequired": {
@@ -5523,7 +5836,9 @@ export const METHODS = [
     },
     "jsonFull": {
       "chat_id": 123456789,
-      "custom_description": "example"
+      "custom_description": "example",
+      "custom_description_parse_mode": "example",
+      "custom_description_entities": []
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/verifyChat\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
@@ -6138,6 +6453,27 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getChatGifts\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789\n}'"
   },
   {
+    "name": "getUniqueGift",
+    "href": "https://core.telegram.org/bots/api#getuniquegift",
+    "description": "Use this method to get information about a unique gift by its name. Returns a UniqueGift object on success.",
+    "returns": "UniqueGift",
+    "params": [
+      {
+        "name": "name",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique name of the gift"
+      }
+    ],
+    "jsonRequired": {
+      "name": "example"
+    },
+    "jsonFull": {
+      "name": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/getUniqueGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"name\": \"example\"\n}'"
+  },
+  {
     "name": "convertGiftToStars",
     "href": "https://core.telegram.org/bots/api#convertgifttostars",
     "description": "Converts a given regular gift to Telegram Stars. Requires the can_convert_gifts_to_stars business bot right. Returns True on success.",
@@ -6252,6 +6588,35 @@ export const METHODS = [
       "star_count": 123456789
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/transferGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\",\n  \"new_owner_chat_id\": 123456789\n}'"
+  },
+  {
+    "name": "deleteBusinessAccountGift",
+    "href": "https://core.telegram.org/bots/api#deletebusinessaccountgift",
+    "description": "Deletes a regular gift owned by a managed business account without receiving Telegram Stars for it. Requires the can_convert_gifts_to_stars business bot right. The gift can be deleted only if it isn't limited (the field total_count of the Gift is omitted) and wasn't refunded. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "business_connection_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the business connection"
+      },
+      {
+        "name": "owned_gift_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the regular gift that should be deleted"
+      }
+    ],
+    "jsonRequired": {
+      "business_connection_id": "example",
+      "owned_gift_id": "example"
+    },
+    "jsonFull": {
+      "business_connection_id": "example",
+      "owned_gift_id": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/deleteBusinessAccountGift\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"owned_gift_id\": \"example\"\n}'"
   },
   {
     "name": "postStory",
@@ -6616,7 +6981,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6698,7 +7063,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6773,7 +7138,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6829,7 +7194,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -6921,7 +7286,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -7005,6 +7370,89 @@ export const METHODS = [
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageChecklist\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"business_connection_id\": \"example\",\n  \"chat_id\": 123456789,\n  \"message_id\": 123456789,\n  \"checklist\": {}\n}'"
   },
   {
+    "name": "editMessageWidgetData",
+    "href": "https://core.telegram.org/bots/api#editmessagewidgetdata",
+    "description": "Use this method to edit data of a widget in a message sent by the bot or via the bot (for inline bots). Public data of a shared widget can be changed at most once per second. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "chat_id",
+        "typesLabel": "Integer | String",
+        "required": false,
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target supergroup in the format @username."
+      },
+      {
+        "name": "message_id",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Required if inline_message_id is not specified. Identifier of the message with the widget."
+      },
+      {
+        "name": "inline_message_id",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Required if chat_id and message_id are not specified. Identifier of the inline message."
+      },
+      {
+        "name": "public_data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "New public data of the widget, 0-1024 bytes; pass an empty string to remove the public data. If omitted, then the public data isn't changed."
+      },
+      {
+        "name": "chat_data",
+        "typesLabel": "String",
+        "required": false,
+        "description": "New data of the widget, which is specific to the message, 0-1024 bytes; pass an empty string to remove the data. If omitted, then the data isn't changed."
+      }
+    ],
+    "jsonRequired": {},
+    "jsonFull": {
+      "chat_id": 123456789,
+      "message_id": 123456789,
+      "inline_message_id": "example",
+      "public_data": "example",
+      "chat_data": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editMessageWidgetData\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
+  },
+  {
+    "name": "editSharedWidgetData",
+    "href": "https://core.telegram.org/bots/api#editsharedwidgetdata",
+    "description": "Use this method to edit public data of a shared widget created by the bot. A shared widget can be edited at most once per second. On success, True is returned.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "widget_id",
+        "typesLabel": "String",
+        "required": true,
+        "description": "Unique identifier of the shared widget"
+      },
+      {
+        "name": "public_data",
+        "typesLabel": "String",
+        "required": true,
+        "description": "New public data of the widget, 0-1024 bytes; pass an empty string to remove the public data"
+      },
+      {
+        "name": "cache_time",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "The maximum amount of time in seconds that the public data of the widget may be cached client-side; 5-3600. If omitted, then the current value is kept, which is 30 by default."
+      }
+    ],
+    "jsonRequired": {
+      "widget_id": "example",
+      "public_data": "example"
+    },
+    "jsonFull": {
+      "widget_id": "example",
+      "public_data": "example",
+      "cache_time": 123456789
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/editSharedWidgetData\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"widget_id\": \"example\",\n  \"public_data\": \"example\"\n}'"
+  },
+  {
     "name": "editMessageReplyMarkup",
     "href": "https://core.telegram.org/bots/api#editmessagereplymarkup",
     "description": "Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
@@ -7020,7 +7468,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": false,
-        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username."
+        "description": "Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username."
       },
       {
         "name": "message_id",
@@ -7067,7 +7515,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -7423,7 +7871,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_id",
@@ -7452,7 +7900,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_ids",
@@ -7601,8 +8049,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -7678,7 +8126,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "sticker": "https://example.com/file.jpg"
     },
     "jsonFull": {
@@ -7697,7 +8144,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendSticker\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"sticker\": \"https://example.com/file.jpg\"\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendSticker\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"sticker\": \"https://example.com/file.jpg\"\n}'"
   },
   {
     "name": "getStickerSet",
@@ -8191,8 +8638,8 @@ export const METHODS = [
       {
         "name": "chat_id",
         "typesLabel": "Integer | String",
-        "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "required": false,
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username; required unless the message is sent as an ephemeral reply to a callback query"
       },
       {
         "name": "message_thread_id",
@@ -8262,7 +8709,6 @@ export const METHODS = [
       }
     ],
     "jsonRequired": {
-      "chat_id": 123456789,
       "rich_message": {}
     },
     "jsonFull": {
@@ -8280,7 +8726,7 @@ export const METHODS = [
       "reply_parameters": {},
       "reply_markup": {}
     },
-    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendRichMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"chat_id\": 123456789,\n  \"rich_message\": {}\n}'"
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/sendRichMessage\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"rich_message\": {}\n}'"
   },
   {
     "name": "sendRichMessageDraft",
@@ -8407,7 +8853,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot, supergroup or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       },
       {
         "name": "message_thread_id",
