@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE — DO NOT EDIT
 
 export const META = {
-  "version": "Bot API 10.4",
-  "release_date": "November 9, 2026",
-  "changelog": "https://core.telegram.org/bots/api#november-9-2026"
+  "version": "Bot API 10.5",
+  "release_date": "November 22, 2026",
+  "changelog": "https://core.telegram.org/bots/api#november-22-2026"
 };
 
 export const METHODS = [
@@ -142,8 +142,8 @@ export const METHODS = [
   {
     "name": "getMe",
     "href": "https://core.telegram.org/bots/api#getme",
-    "description": "A simple method for testing your bot's authentication token. Requires no parameters. Returns basic information about the bot in form of a User object.",
-    "returns": "User",
+    "description": "A simple method for testing your bot's authentication token. Requires no parameters. Returns information about the bot in form of a BotFullInfo object.",
+    "returns": "BotFullInfo",
     "params": [],
     "jsonRequired": {},
     "jsonFull": {},
@@ -5032,7 +5032,7 @@ export const METHODS = [
   {
     "name": "answerCallbackQuery",
     "href": "https://core.telegram.org/bots/api#answercallbackquery",
-    "description": "Use this method to send answers to callback queries sent from inline keyboards. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned.",
+    "description": "Use this method to send answers to callback queries sent from inline keyboards or rich messages. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, True is returned.",
     "returns": "Boolean",
     "params": [
       {
@@ -5283,6 +5283,123 @@ export const METHODS = [
       "added_user_ids": []
     },
     "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setManagedBotAccessSettings\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n  \"user_id\": 123456789,\n  \"is_access_restricted\": false\n}'"
+  },
+  {
+    "name": "setMySettings",
+    "href": "https://core.telegram.org/bots/api#setmysettings",
+    "description": "Use this method to change settings of the bot. Settings that aren't specified remain unchanged. Returns True on success.",
+    "returns": "Boolean",
+    "params": [
+      {
+        "name": "supports_inline_queries",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to enable inline mode for the bot or False to disable it"
+      },
+      {
+        "name": "inline_query_placeholder",
+        "typesLabel": "String",
+        "required": false,
+        "description": "New placeholder for inline queries, which is shown in the input field after the bot's username. Pass an empty string to use the default placeholder."
+      },
+      {
+        "name": "needs_inline_query_location",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to request the location of the user with every inline query to the bot or False to stop requesting it"
+      },
+      {
+        "name": "inline_feedback_share_denominator",
+        "typesLabel": "Integer",
+        "required": false,
+        "description": "Denominator of the share of chosen inline results received by the bot; the bot receives 1 out of inline_feedback_share_denominator chosen results. Must be one of 1, 10, 100, or 1000. Pass 0 to stop receiving chosen inline results."
+      },
+      {
+        "name": "can_join_groups",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow adding the bot to groups or False to disallow it"
+      },
+      {
+        "name": "can_read_all_group_messages",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to disable privacy mode for the bot or False to enable it"
+      },
+      {
+        "name": "can_connect_to_business",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow connecting the bot to user accounts to manage them or False to disallow it"
+      },
+      {
+        "name": "can_manage_bots",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow creating other bots that will be controlled by the bot or False to disallow it"
+      },
+      {
+        "name": "supports_guest_queries",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow guest queries to the bot from chats it isn't a member of or False to disallow them"
+      },
+      {
+        "name": "supports_join_request_queries",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow assigning the bot to process join request queries or False to disallow it"
+      },
+      {
+        "name": "has_topics_enabled",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to enable forum topic mode in private chats with the bot or False to disable it"
+      },
+      {
+        "name": "allows_users_to_create_topics",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow users to create and delete topics in private chats with the bot or False to disallow it"
+      },
+      {
+        "name": "has_topic_sidebar",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to show topics in private chats with the bot in a sidebar or False to stop showing them in a sidebar"
+      },
+      {
+        "name": "can_communicate_with_bots",
+        "typesLabel": "Boolean",
+        "required": false,
+        "description": "Pass True to allow the bot to communicate with other bots in groups, private chats, and through business accounts or False to disallow it"
+      },
+      {
+        "name": "callback_query_mode",
+        "typesLabel": "String",
+        "required": false,
+        "description": "Mode in which the bot receives callback queries from buttons in messages sent by the bot. Must be one of \"default\" (the field message is always used and contains an InaccessibleMessage if the message is inaccessible to the bot), \"auto\" (the field inline_message_id is used instead of the field message if the message is inaccessible to the bot; the field message can still contain an inaccessible message if the message has just been deleted), or \"inline\" (the field inline_message_id is always used instead of the field message)."
+      }
+    ],
+    "jsonRequired": {},
+    "jsonFull": {
+      "supports_inline_queries": false,
+      "inline_query_placeholder": "example",
+      "needs_inline_query_location": false,
+      "inline_feedback_share_denominator": 123456789,
+      "can_join_groups": false,
+      "can_read_all_group_messages": false,
+      "can_connect_to_business": false,
+      "can_manage_bots": false,
+      "supports_guest_queries": false,
+      "supports_join_request_queries": false,
+      "has_topics_enabled": false,
+      "allows_users_to_create_topics": false,
+      "has_topic_sidebar": false,
+      "can_communicate_with_bots": false,
+      "callback_query_mode": "example"
+    },
+    "curl": "curl -X POST \"https://api.telegram.org/bot<BOT_TOKEN>/setMySettings\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{}'"
   },
   {
     "name": "setMyCommands",
