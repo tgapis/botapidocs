@@ -29,7 +29,7 @@ export const METHODS = [
         "name": "timeout",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Timeout in seconds for long polling. Defaults to 0, i.e. usual short polling. Should be positive, short polling should be used for testing purposes only."
+        "description": "Timeout in seconds for long polling. Defaults to 0, i.e. usual short polling. Should be positive; short polling should be used for testing purposes only."
       },
       {
         "name": "allowed_updates",
@@ -50,7 +50,7 @@ export const METHODS = [
   {
     "name": "setWebhook",
     "href": "https://core.telegram.org/bots/api#setwebhook",
-    "description": "Use this method to specify a URL and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized Update. In case of an unsuccessful request (a request with response HTTP status code different from 2XY), we will repeat the request and give up after a reasonable amount of attempts. Returns True on success.\nIf you'd like to make sure that the webhook was set by you, you can specify secret data in the parameter secret_token. If specified, the request will contain a header \"X-Telegram-Bot-Api-Secret-Token\" with the secret token as content.",
+    "description": "Use this method to specify a URL and receive incoming updates via an outgoing webhook. Whenever there is an update for the bot, we will send an HTTPS POST request to the specified URL, containing a JSON-serialized Update. In case of an unsuccessful request (a request with response HTTP status code different from 2XY), we will repeat the request and give up after a reasonable number of attempts. Returns True on success.\nIf you'd like to make sure that the webhook was set by you, you can specify secret data in the parameter secret_token. If specified, the request will contain a header \"X-Telegram-Bot-Api-Secret-Token\" with the secret token as content.",
     "returns": "Boolean",
     "params": [
       {
@@ -81,7 +81,7 @@ export const METHODS = [
         "name": "allowed_updates",
         "typesLabel": "Array of String",
         "required": false,
-        "description": "A JSON-serialized list of the update types you want your bot to receive. For example, specify [\"message\", \"edited_channel_post\", \"callback_query\"] to only receive updates of these types. See Update for a complete list of available update types. Specify an empty list to receive all update types except chat_member, message_reaction, and message_reaction_count (default). If not specified, the previous setting will be used. Please note that this parameter doesn't affect updates created before the call to the setWebhook, so unwanted updates may be received for a short period of time."
+        "description": "A JSON-serialized list of the update types you want your bot to receive. For example, specify [\"message\", \"edited_channel_post\", \"callback_query\"] to only receive updates of these types. See Update for a complete list of available update types. Specify an empty list to receive all update types except chat_member, message_reaction, and message_reaction_count (default). If not specified, the previous setting will be used. Please note that this parameter doesn't affect updates created before the call to setWebhook, so unwanted updates may be received for a short period of time."
       },
       {
         "name": "drop_pending_updates",
@@ -132,7 +132,7 @@ export const METHODS = [
   {
     "name": "getWebhookInfo",
     "href": "https://core.telegram.org/bots/api#getwebhookinfo",
-    "description": "Use this method to get current webhook status. Requires no parameters. On success, returns a WebhookInfo object. If the bot is using getUpdates, will return an object with the url field empty.",
+    "description": "Use this method to get the current webhook status. Requires no parameters. On success, returns a WebhookInfo object. If the bot is using getUpdates, it will return an object with the url field empty.",
     "returns": "WebhookInfo",
     "params": [],
     "jsonRequired": {},
@@ -142,7 +142,7 @@ export const METHODS = [
   {
     "name": "getMe",
     "href": "https://core.telegram.org/bots/api#getme",
-    "description": "A simple method for testing your bot's authentication token. Requires no parameters. Returns information about the bot in form of a BotFullInfo object.",
+    "description": "A simple method for testing your bot's authentication token. Requires no parameters. Returns information about the bot in the form of a BotFullInfo object.",
     "returns": "BotFullInfo",
     "params": [],
     "jsonRequired": {},
@@ -152,7 +152,7 @@ export const METHODS = [
   {
     "name": "logOut",
     "href": "https://core.telegram.org/bots/api#logout",
-    "description": "Use this method to log out from the cloud Bot API server before launching the bot locally. You must log out the bot before running it locally, otherwise there is no guarantee that the bot will receive updates. After a successful call, you can immediately log in on a local server, but will not be able to log in back to the cloud Bot API server for 10 minutes. Returns True on success. Requires no parameters.",
+    "description": "Use this method to log out from the cloud Bot API server before launching the bot locally. You must log out the bot before running it locally; otherwise, there is no guarantee that the bot will receive updates. After a successful call, you can immediately log in on a local server, but will not be able to log back in to the cloud Bot API server for 10 minutes. Returns True on success. Requires no parameters.",
     "returns": "Boolean",
     "params": [],
     "jsonRequired": {},
@@ -839,19 +839,19 @@ export const METHODS = [
         "name": "photo",
         "typesLabel": "InputFile | String",
         "required": true,
-        "description": "The static photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending live photos by a URL is currently unsupported."
+        "description": "The static photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended) or upload a new photo using multipart/form-data. More information on Sending Files: https://core.telegram.org/bots/api#sending-files. Sending live photos by a URL is currently unsupported."
       },
       {
         "name": "caption",
         "typesLabel": "String",
         "required": false,
-        "description": "Video caption (may also be used when resending videos by file_id), 0-1024 characters after entities parsing"
+        "description": "Live photo caption (may also be used when resending live photos by file_id), 0-1024 characters after entities parsing"
       },
       {
         "name": "parse_mode",
         "typesLabel": "String",
         "required": false,
-        "description": "Mode for parsing entities in the video caption. See formatting options for more details."
+        "description": "Mode for parsing entities in the live photo caption. See formatting options for more details."
       },
       {
         "name": "caption_entities",
@@ -869,7 +869,7 @@ export const METHODS = [
         "name": "has_spoiler",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the video needs to be covered with a spoiler animation"
+        "description": "Pass True if the live photo needs to be covered with a spoiler animation"
       },
       {
         "name": "disable_notification",
@@ -944,7 +944,7 @@ export const METHODS = [
   {
     "name": "sendAudio",
     "href": "https://core.telegram.org/bots/api#sendaudio",
-    "description": "Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .MP3 or .M4A format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.\nFor sending voice messages, use the sendVoice method instead.",
+    "description": "Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .MP3 or .M4A format. On success, the sent Message is returned. Bots can currently send audio files of up to 50 MB in size; this limit may be changed in the future.\nFor sending voice messages, use the sendVoice method instead.",
     "returns": "Message",
     "params": [
       {
@@ -1023,7 +1023,7 @@ export const METHODS = [
         "name": "thumbnail",
         "typesLabel": "InputFile | String",
         "required": false,
-        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
+        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can only be uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
       },
       {
         "name": "disable_notification",
@@ -1098,7 +1098,7 @@ export const METHODS = [
   {
     "name": "sendDocument",
     "href": "https://core.telegram.org/bots/api#senddocument",
-    "description": "Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size, this limit may be changed in the future.",
+    "description": "Use this method to send general files. On success, the sent Message is returned. Bots can currently send files of any type of up to 50 MB in size; this limit may be changed in the future.",
     "returns": "Message",
     "params": [
       {
@@ -1141,7 +1141,7 @@ export const METHODS = [
         "name": "thumbnail",
         "typesLabel": "InputFile | String",
         "required": false,
-        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
+        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can only be uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
       },
       {
         "name": "caption",
@@ -1238,7 +1238,7 @@ export const METHODS = [
   {
     "name": "sendVideo",
     "href": "https://core.telegram.org/bots/api#sendvideo",
-    "description": "Use this method to send video files, Telegram clients support MPEG4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future.",
+    "description": "Use this method to send video files; Telegram clients support MPEG4 videos (other formats may be sent as Document). On success, the sent Message is returned. Bots can currently send video files of up to 50 MB in size; this limit may be changed in the future.",
     "returns": "Message",
     "params": [
       {
@@ -1299,7 +1299,7 @@ export const METHODS = [
         "name": "thumbnail",
         "typesLabel": "InputFile | String",
         "required": false,
-        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
+        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can only be uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
       },
       {
         "name": "cover",
@@ -1427,7 +1427,7 @@ export const METHODS = [
   {
     "name": "sendAnimation",
     "href": "https://core.telegram.org/bots/api#sendanimation",
-    "description": "Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size, this limit may be changed in the future.",
+    "description": "Use this method to send animation files (GIF or H.264/MPEG-4 AVC video without sound). On success, the sent Message is returned. Bots can currently send animation files of up to 50 MB in size; this limit may be changed in the future.",
     "returns": "Message",
     "params": [
       {
@@ -1488,13 +1488,13 @@ export const METHODS = [
         "name": "thumbnail",
         "typesLabel": "InputFile | String",
         "required": false,
-        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
+        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can only be uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
       },
       {
         "name": "caption",
         "typesLabel": "String",
         "required": false,
-        "description": "Animation caption (may also be used when resending animation by file_id), 0-1024 characters after entities parsing"
+        "description": "Animation caption (may also be used when resending animations by file_id), 0-1024 characters after entities parsing"
       },
       {
         "name": "parse_mode",
@@ -1595,7 +1595,7 @@ export const METHODS = [
   {
     "name": "sendVoice",
     "href": "https://core.telegram.org/bots/api#sendvoice",
-    "description": "Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .OGG file encoded with OPUS, or in .MP3 format, or in .M4A format (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.",
+    "description": "Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .OGG file encoded with OPUS, or in .MP3 format, or in .M4A format (other formats may be sent as Audio or Document). On success, the sent Message is returned. Bots can currently send voice messages of up to 50 MB in size; this limit may be changed in the future.",
     "returns": "Message",
     "params": [
       {
@@ -1728,7 +1728,7 @@ export const METHODS = [
   {
     "name": "sendVideoNote",
     "href": "https://core.telegram.org/bots/api#sendvideonote",
-    "description": "Use this method to send a rounded square MPEG4 video of up to 1 minute long. On success, the sent Message is returned.",
+    "description": "Use this method to send a rounded square MPEG4 video up to 1 minute long. On success, the sent Message is returned.",
     "returns": "Message",
     "params": [
       {
@@ -1783,7 +1783,7 @@ export const METHODS = [
         "name": "thumbnail",
         "typesLabel": "InputFile | String",
         "required": false,
-        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can be only uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
+        "description": "Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail's width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can't be reused and can only be uploaded as a new file, so you can pass \"attach://<file_attach_name>\" if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More information on Sending Files: https://core.telegram.org/bots/api#sending-files"
       },
       {
         "name": "disable_notification",
@@ -2002,7 +2002,7 @@ export const METHODS = [
   {
     "name": "sendSharedWidget",
     "href": "https://core.telegram.org/bots/api#sendsharedwidget",
-    "description": "Use this method to send again a shared widget created by the bot. Currently, in the production environment, widgets can be sent only to private chats, and sent widgets automatically have protected content and therefore can't be forwarded. On success, the sent Message is returned.",
+    "description": "Use this method to resend a shared widget created by the bot. Currently, in the production environment, widgets can be sent only to private chats, and sent widgets automatically have protected content and therefore can't be forwarded. On success, the sent Message is returned.",
     "returns": "Message",
     "params": [
       {
@@ -2158,7 +2158,7 @@ export const METHODS = [
         "name": "payload",
         "typesLabel": "String",
         "required": false,
-        "description": "Bot-defined paid media payload, 0-128 bytes. This will not be displayed to the user, use it for your internal processes."
+        "description": "Bot-defined paid media payload, 0-128 bytes. This will not be displayed to the user; use it for your internal processes."
       },
       {
         "name": "caption",
@@ -2250,7 +2250,7 @@ export const METHODS = [
   {
     "name": "sendMediaGroup",
     "href": "https://core.telegram.org/bots/api#sendmediagroup",
-    "description": "Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an Array of Message objects that were sent is returned.",
+    "description": "Use this method to send a group of photos, live photos, videos, documents or audios as an album. Documents and audio files can only be grouped in an album with messages of the same type. On success, an Array of Message objects that were sent is returned.",
     "returns": "Array of Message",
     "params": [
       {
@@ -2335,7 +2335,7 @@ export const METHODS = [
   {
     "name": "sendLocation",
     "href": "https://core.telegram.org/bots/api#sendlocation",
-    "description": "Use this method to send point on the map. On success, the sent Message is returned.",
+    "description": "Use this method to send a point on the map. On success, the sent Message is returned.",
     "returns": "Message",
     "params": [
       {
@@ -2827,7 +2827,7 @@ export const METHODS = [
         "name": "allows_revoting",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the poll allows to change chosen answer options, defaults to False for quizzes and to True for regular polls"
+        "description": "Pass True if the poll allows changing the chosen answer options, defaults to False for quizzes and to True for regular polls"
       },
       {
         "name": "shuffle_options",
@@ -3486,7 +3486,7 @@ export const METHODS = [
         "name": "until_date",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Date when the user will be unbanned; Unix time. If user is banned for more than 366 days or less than 30 seconds from the current time they are considered to be banned forever. Applied for supergroups and channels only."
+        "description": "Date when the user will be unbanned; Unix time. If the user is banned for more than 366 days or less than 30 seconds from the current time, they are considered to be banned forever. Applied for supergroups and channels only."
       },
       {
         "name": "revoke_messages",
@@ -3577,7 +3577,7 @@ export const METHODS = [
         "name": "until_date",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Date when restrictions will be lifted for the user; Unix time. If user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever."
+        "description": "Date when restrictions will be lifted for the user; Unix time. If the user is restricted for more than 366 days or less than 30 seconds from the current time, they are considered to be restricted forever."
       }
     ],
     "jsonRequired": {
@@ -3652,7 +3652,7 @@ export const METHODS = [
         "name": "can_change_info",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the administrator can change chat title, photo and other settings"
+        "description": "Pass True if the administrator can change the chat title, photo and other settings"
       },
       {
         "name": "can_invite_users",
@@ -3883,7 +3883,7 @@ export const METHODS = [
   {
     "name": "setChatPermissions",
     "href": "https://core.telegram.org/bots/api#setchatpermissions",
-    "description": "Use this method to set default chat permissions for all members. The bot must be an administrator in the group or a supergroup for this to work and must have the can_restrict_members administrator rights. Returns True on success.",
+    "description": "Use this method to set default chat permissions for all members. The bot must be an administrator in the group or a supergroup for this to work and must have the can_restrict_members administrator right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -3940,7 +3940,7 @@ export const METHODS = [
   {
     "name": "createChatInviteLink",
     "href": "https://core.telegram.org/bots/api#createchatinvitelink",
-    "description": "Use this method to create an additional invite link for a chat. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. The link can be revoked using the method revokeChatInviteLink. Returns the new invite link as ChatInviteLink object.",
+    "description": "Use this method to create an additional invite link for a chat. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. The link can be revoked using the method revokeChatInviteLink. Returns the new invite link as a ChatInviteLink object.",
     "returns": "ChatInviteLink",
     "params": [
       {
@@ -4046,7 +4046,7 @@ export const METHODS = [
   {
     "name": "createChatSubscriptionInviteLink",
     "href": "https://core.telegram.org/bots/api#createchatsubscriptioninvitelink",
-    "description": "Use this method to create a subscription invite link for a channel chat. The bot must have the can_invite_users administrator rights. The link can be edited using the method editChatSubscriptionInviteLink or revoked using the method revokeChatInviteLink. Returns the new invite link as a ChatInviteLink object.",
+    "description": "Use this method to create a subscription invite link for a channel chat. The bot must have the can_invite_users administrator right. The link can be edited using the method editChatSubscriptionInviteLink or revoked using the method revokeChatInviteLink. Returns the new invite link as a ChatInviteLink object.",
     "returns": "ChatInviteLink",
     "params": [
       {
@@ -4090,7 +4090,7 @@ export const METHODS = [
   {
     "name": "editChatSubscriptionInviteLink",
     "href": "https://core.telegram.org/bots/api#editchatsubscriptioninvitelink",
-    "description": "Use this method to edit a subscription invite link created by the bot. The bot must have the can_invite_users administrator rights. Returns the edited invite link as a ChatInviteLink object.",
+    "description": "Use this method to edit a subscription invite link created by the bot. The bot must have the can_invite_users administrator right. Returns the edited invite link as a ChatInviteLink object.",
     "returns": "ChatInviteLink",
     "params": [
       {
@@ -4126,7 +4126,7 @@ export const METHODS = [
   {
     "name": "revokeChatInviteLink",
     "href": "https://core.telegram.org/bots/api#revokechatinvitelink",
-    "description": "Use this method to revoke an invite link created by the bot. If the primary link is revoked, a new link is automatically generated. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the revoked invite link as ChatInviteLink object.",
+    "description": "Use this method to revoke an invite link created by the bot. If the primary link is revoked, a new link is automatically generated. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the revoked invite link as a ChatInviteLink object.",
     "returns": "ChatInviteLink",
     "params": [
       {
@@ -4739,7 +4739,7 @@ export const METHODS = [
   {
     "name": "editForumTopic",
     "href": "https://core.telegram.org/bots/api#editforumtopic",
-    "description": "Use this method to edit name and icon of a topic in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights, unless it is the creator of the topic. Returns True on success.",
+    "description": "Use this method to edit the name and icon of a topic in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right, unless it is the creator of the topic. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4782,7 +4782,7 @@ export const METHODS = [
   {
     "name": "closeForumTopic",
     "href": "https://core.telegram.org/bots/api#closeforumtopic",
-    "description": "Use this method to close an open topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights, unless it is the creator of the topic. Returns True on success.",
+    "description": "Use this method to close an open topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right, unless it is the creator of the topic. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4811,7 +4811,7 @@ export const METHODS = [
   {
     "name": "reopenForumTopic",
     "href": "https://core.telegram.org/bots/api#reopenforumtopic",
-    "description": "Use this method to reopen a closed topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights, unless it is the creator of the topic. Returns True on success.",
+    "description": "Use this method to reopen a closed topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right, unless it is the creator of the topic. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4840,7 +4840,7 @@ export const METHODS = [
   {
     "name": "deleteForumTopic",
     "href": "https://core.telegram.org/bots/api#deleteforumtopic",
-    "description": "Use this method to delete a forum topic along with all its messages in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_delete_messages administrator rights. Returns True on success.",
+    "description": "Use this method to delete a forum topic along with all its messages in a forum supergroup chat or a private chat with a user. In the case of a supergroup chat the bot must be an administrator in the chat for this to work and must have the can_delete_messages administrator right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4898,7 +4898,7 @@ export const METHODS = [
   {
     "name": "editGeneralForumTopic",
     "href": "https://core.telegram.org/bots/api#editgeneralforumtopic",
-    "description": "Use this method to edit the name of the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. Returns True on success.",
+    "description": "Use this method to edit the name of the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4927,7 +4927,7 @@ export const METHODS = [
   {
     "name": "closeGeneralForumTopic",
     "href": "https://core.telegram.org/bots/api#closegeneralforumtopic",
-    "description": "Use this method to close an open 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. Returns True on success.",
+    "description": "Use this method to close an open 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4948,7 +4948,7 @@ export const METHODS = [
   {
     "name": "reopenGeneralForumTopic",
     "href": "https://core.telegram.org/bots/api#reopengeneralforumtopic",
-    "description": "Use this method to reopen a closed 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. The topic will be automatically unhidden if it was hidden. Returns True on success.",
+    "description": "Use this method to reopen a closed 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. The topic will be automatically unhidden if it was hidden. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4969,7 +4969,7 @@ export const METHODS = [
   {
     "name": "hideGeneralForumTopic",
     "href": "https://core.telegram.org/bots/api#hidegeneralforumtopic",
-    "description": "Use this method to hide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. The topic will be automatically closed if it was open. Returns True on success.",
+    "description": "Use this method to hide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. The topic will be automatically closed if it was open. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -4990,7 +4990,7 @@ export const METHODS = [
   {
     "name": "unhideGeneralForumTopic",
     "href": "https://core.telegram.org/bots/api#unhidegeneralforumtopic",
-    "description": "Use this method to unhide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator rights. Returns True on success.",
+    "description": "Use this method to unhide the 'General' topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have the can_manage_topics administrator right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -5287,7 +5287,7 @@ export const METHODS = [
   {
     "name": "setMySettings",
     "href": "https://core.telegram.org/bots/api#setmysettings",
-    "description": "Use this method to change settings of the bot. Settings that aren't specified remain unchanged. Returns True on success.",
+    "description": "Use this method to change the settings of the bot. Settings that aren't specified remain unchanged. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -5735,7 +5735,7 @@ export const METHODS = [
         "name": "for_channels",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True to get default administrator rights of the bot in channels. Otherwise, default administrator rights of the bot for groups and supergroups will be returned."
+        "description": "Pass True to get the default administrator rights of the bot in channels. Otherwise, the default administrator rights of the bot for groups and supergroups will be returned."
       }
     ],
     "jsonRequired": {},
@@ -5990,7 +5990,7 @@ export const METHODS = [
         "name": "chat_id",
         "typesLabel": "Integer | String",
         "required": true,
-        "description": "Unique identifier for the target chat or username of the target bot or channel in the format @username"
+        "description": "Unique identifier for the target chat or username of the target bot, supergroup, or channel in the format @username"
       }
     ],
     "jsonRequired": {
@@ -6004,7 +6004,7 @@ export const METHODS = [
   {
     "name": "readBusinessMessage",
     "href": "https://core.telegram.org/bots/api#readbusinessmessage",
-    "description": "Marks incoming message as read on behalf of a business account. Requires the can_read_messages business bot right. Returns True on success.",
+    "description": "Marks an incoming message as read on behalf of a business account. Requires the can_read_messages business bot right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6041,7 +6041,7 @@ export const METHODS = [
   {
     "name": "deleteBusinessMessages",
     "href": "https://core.telegram.org/bots/api#deletebusinessmessages",
-    "description": "Delete messages on behalf of a business account. Requires the can_delete_sent_messages business bot right to delete messages sent by the bot itself, or the can_delete_all_messages business bot right to delete any message. Returns True on success.",
+    "description": "Deletes messages on behalf of a business account. Requires the can_delete_sent_messages business bot right to delete messages sent by the bot itself, or the can_delete_all_messages business bot right to delete any message. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6070,7 +6070,7 @@ export const METHODS = [
   {
     "name": "setBusinessAccountName",
     "href": "https://core.telegram.org/bots/api#setbusinessaccountname",
-    "description": "Changes the first and last name of a managed business account. Requires the can_change_name business bot right. Returns True on success.",
+    "description": "Changes the first and last name of a managed business account. Requires the can_edit_name business bot right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6106,7 +6106,7 @@ export const METHODS = [
   {
     "name": "setBusinessAccountUsername",
     "href": "https://core.telegram.org/bots/api#setbusinessaccountusername",
-    "description": "Changes the username of a managed business account. Requires the can_change_username business bot right. Returns True on success.",
+    "description": "Changes the username of a managed business account. Requires the can_edit_username business bot right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6134,7 +6134,7 @@ export const METHODS = [
   {
     "name": "setBusinessAccountBio",
     "href": "https://core.telegram.org/bots/api#setbusinessaccountbio",
-    "description": "Changes the bio of a managed business account. Requires the can_change_bio business bot right. Returns True on success.",
+    "description": "Changes the bio of a managed business account. Requires the can_edit_bio business bot right. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6374,7 +6374,7 @@ export const METHODS = [
         "name": "offset",
         "typesLabel": "String",
         "required": false,
-        "description": "Offset of the first entry to return as received from the previous request; use empty string to get the first chunk of results"
+        "description": "Offset of the first entry to return as received from the previous request; use an empty string to get the first chunk of results"
       },
       {
         "name": "limit",
@@ -6647,7 +6647,7 @@ export const METHODS = [
         "name": "star_count",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The amount of Telegram Stars that will be paid for the upgrade from the business account balance. If gift.prepaid_upgrade_star_count > 0, then pass 0, otherwise, the can_transfer_stars business bot right is required and gift.upgrade_star_count must be passed."
+        "description": "The amount of Telegram Stars that will be paid for the upgrade from the business account balance. If gift.prepaid_upgrade_star_count > 0, then pass 0; otherwise, the can_transfer_stars business bot right is required and gift.upgrade_star_count must be passed."
       }
     ],
     "jsonRequired": {
@@ -6665,7 +6665,7 @@ export const METHODS = [
   {
     "name": "transferGift",
     "href": "https://core.telegram.org/bots/api#transfergift",
-    "description": "Transfers an owned unique gift to another user. Requires the can_transfer_and_upgrade_gifts business bot right. Requires can_transfer_stars business bot right if the transfer is paid. Returns True on success.",
+    "description": "Transfers an owned unique gift to another user. Requires the can_transfer_and_upgrade_gifts business bot right. Requires the can_transfer_stars business bot right if the transfer is paid. Returns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -6678,13 +6678,13 @@ export const METHODS = [
         "name": "owned_gift_id",
         "typesLabel": "String",
         "required": true,
-        "description": "Unique identifier of the regular gift that should be transferred"
+        "description": "Unique identifier of the unique gift that should be transferred"
       },
       {
         "name": "new_owner_chat_id",
         "typesLabel": "Integer",
         "required": true,
-        "description": "Unique identifier of the chat which will own the gift. The chat must be active in the last 24 hours."
+        "description": "Unique identifier of the chat which will own the gift. The chat must have been active in the last 24 hours."
       },
       {
         "name": "star_count",
@@ -7085,7 +7085,7 @@ export const METHODS = [
   {
     "name": "editMessageText",
     "href": "https://core.telegram.org/bots/api#editmessagetext",
-    "description": "Use this method to edit text, rich and game messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit text, rich and game messages. On success, if the edited message is not an inline message, the edited Message is returned; otherwise, True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7140,7 +7140,7 @@ export const METHODS = [
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": false,
-        "description": "New rich content of the message; required if text isn't specified. Direct upload of new files and explicit upload of files by a URL isn't supported when an inline message is edited."
+        "description": "New rich content of the message; required if text isn't specified. Direct upload of new files and explicit upload of files by a URL aren't supported when an inline message is edited."
       },
       {
         "name": "reply_markup",
@@ -7167,7 +7167,7 @@ export const METHODS = [
   {
     "name": "editMessageCaption",
     "href": "https://core.telegram.org/bots/api#editmessagecaption",
-    "description": "Use this method to edit captions of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit captions of messages. On success, if the edited message is not an inline message, the edited Message is returned; otherwise, True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7216,7 +7216,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, photo and video messages."
+        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, live photo, paid media, photo, video and widget messages."
       },
       {
         "name": "reply_markup",
@@ -7242,7 +7242,7 @@ export const METHODS = [
   {
     "name": "editMessageMedia",
     "href": "https://core.telegram.org/bots/api#editmessagemedia",
-    "description": "Use this method to edit animation, audio, document, live photo, photo, or video messages, or to replace a text or a rich message with a media. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit animation, audio, document, live photo, photo, or video messages, or to replace a text or a rich message with media. If a message is part of a message album, then it can be edited only to an audio for audio albums, only to a document for document albums and to a photo, a live photo, or a video otherwise. When an inline message is edited, a new file can't be uploaded; use a previously uploaded file via its file_id or specify a URL. On success, if the edited message is not an inline message, the edited Message is returned; otherwise, True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7298,7 +7298,7 @@ export const METHODS = [
   {
     "name": "editMessageLiveLocation",
     "href": "https://core.telegram.org/bots/api#editmessagelivelocation",
-    "description": "Use this method to edit live location messages. A location can be edited until its live_period expires or editing is explicitly disabled by a call to stopMessageLiveLocation. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.",
+    "description": "Use this method to edit live location messages. A location can be edited until its live_period expires or editing is explicitly disabled by a call to stopMessageLiveLocation. On success, if the edited message is not an inline message, the edited Message is returned; otherwise, True is returned.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7390,7 +7390,7 @@ export const METHODS = [
   {
     "name": "stopMessageLiveLocation",
     "href": "https://core.telegram.org/bots/api#stopmessagelivelocation",
-    "description": "Use this method to stop updating a live location message before live_period expires. On success, if the message is not an inline message, the edited Message is returned, otherwise True is returned.",
+    "description": "Use this method to stop updating a live location message before live_period expires. On success, if the message is not an inline message, the edited Message is returned; otherwise, True is returned.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7444,7 +7444,7 @@ export const METHODS = [
         "name": "business_connection_id",
         "typesLabel": "String",
         "required": true,
-        "description": "Unique identifier of the business connection on behalf of which the message will be sent"
+        "description": "Unique identifier of the business connection on behalf of which the message to be edited was sent"
       },
       {
         "name": "chat_id",
@@ -7572,7 +7572,7 @@ export const METHODS = [
   {
     "name": "editMessageReplyMarkup",
     "href": "https://core.telegram.org/bots/api#editmessagereplymarkup",
-    "description": "Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
+    "description": "Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited Message is returned; otherwise, True is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within 48 hours from the time they were sent.",
     "returns": "Message, Boolean",
     "params": [
       {
@@ -7836,7 +7836,7 @@ export const METHODS = [
         "name": "show_caption_above_media",
         "typesLabel": "Boolean",
         "required": false,
-        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, photo and video messages."
+        "description": "Pass True if the caption must be shown above the message media. Supported only for animation, live photo, photo and video messages."
       },
       {
         "name": "reply_markup",
@@ -7928,7 +7928,7 @@ export const METHODS = [
         "name": "send_date",
         "typesLabel": "Integer",
         "required": false,
-        "description": "Point in time (Unix timestamp) when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must be not more than 2678400 seconds (30 days) in the future."
+        "description": "Point in time (Unix timestamp) when the post is expected to be published; omit if the date has already been specified when the suggested post was created. If specified, then the date must not be more than 2678400 seconds (30 days) in the future."
       }
     ],
     "jsonRequired": {
@@ -7981,7 +7981,7 @@ export const METHODS = [
   {
     "name": "deleteMessage",
     "href": "https://core.telegram.org/bots/api#deletemessage",
-    "description": "Use this method to delete a message, including service messages, with the following limitations:\n- A message can only be deleted if it was sent less than 48 hours ago.\n- Service messages about a supergroup, channel, or forum topic creation can't be deleted.\n- A dice message in a private chat can only be deleted if it was sent more than 24 hours ago.\n- Bots can delete outgoing messages in private chats, groups, and supergroups.\n- Bots can delete incoming messages in private chats.\n- Bots granted can_post_messages permissions can delete outgoing messages in channels.\n- If the bot is an administrator of a group, it can delete any message there.\n- If the bot has can_delete_messages administrator right in a supergroup or a channel, it can delete any message there.\n- If the bot has can_manage_direct_messages administrator right in a channel, it can delete any message in the corresponding direct messages chat.\nReturns True on success.",
+    "description": "Use this method to delete a message, including service messages, with the following limitations:\n- A message can only be deleted if it was sent less than 48 hours ago.\n- Service messages about a supergroup, channel, or forum topic creation can't be deleted.\n- A dice message in a private chat can only be deleted if it was sent more than 24 hours ago.\n- Bots can delete outgoing messages in private chats, groups, and supergroups.\n- Bots can delete incoming messages in private chats.\n- Bots granted can_post_messages permissions can delete outgoing messages in channels.\n- If the bot is an administrator of a group, it can delete any message there.\n- If the bot has the can_delete_messages administrator right in a supergroup or a channel, it can delete any message there.\n- If the bot has the can_manage_direct_messages administrator right in a channel, it can delete any message in the corresponding direct messages chat.\nReturns True on success.",
     "returns": "Boolean",
     "params": [
       {
@@ -8578,7 +8578,7 @@ export const METHODS = [
         "name": "keywords",
         "typesLabel": "Array of String",
         "required": false,
-        "description": "A JSON-serialized list of 0-20 search keywords for the sticker with total length of up to 64 characters"
+        "description": "A JSON-serialized list of 0-20 search keywords for the sticker with a total length of up to 64 characters"
       }
     ],
     "jsonRequired": {
@@ -8750,7 +8750,7 @@ export const METHODS = [
         "name": "business_connection_id",
         "typesLabel": "String",
         "required": false,
-        "description": "Unique identifier of the business connection on behalf of which the message will be sent. Bot can send rich messages on behalf of a business account only if the corresponding user can send rich messages."
+        "description": "Unique identifier of the business connection on behalf of which the message will be sent. The bot can send rich messages on behalf of a business account only if the corresponding user can send rich messages."
       },
       {
         "name": "chat_id",
@@ -8873,7 +8873,7 @@ export const METHODS = [
         "name": "rich_message",
         "typesLabel": "InputRichMessage",
         "required": true,
-        "description": "The partial message to be streamed. Direct upload of new files and explicit upload of files by a URL isn't supported."
+        "description": "The partial message to be streamed. Direct upload of new files and explicit upload of files by a URL aren't supported."
       },
       {
         "name": "can_stop",
@@ -9000,7 +9000,7 @@ export const METHODS = [
         "name": "payload",
         "typesLabel": "String",
         "required": true,
-        "description": "Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use it for your internal processes."
+        "description": "Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user; use it for your internal processes."
       },
       {
         "name": "provider_token",
@@ -9024,13 +9024,13 @@ export const METHODS = [
         "name": "max_tip_amount",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum accepted amount for tips in the smallest units of the currency (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0. Not supported for payments in Telegram Stars."
+        "description": "The maximum accepted amount for tips in the smallest units of the currency (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in currencies.json; it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0. Not supported for payments in Telegram Stars."
       },
       {
         "name": "suggested_tip_amounts",
         "typesLabel": "Array of Integer",
         "required": false,
-        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
+        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increasing order and must not exceed max_tip_amount."
       },
       {
         "name": "start_parameter",
@@ -9042,7 +9042,7 @@ export const METHODS = [
         "name": "provider_data",
         "typesLabel": "String",
         "required": false,
-        "description": "JSON-serialized data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider."
+        "description": "JSON-serialized data about the invoice, which will be shared with the payment provider. A detailed description of the required fields should be provided by the payment provider."
       },
       {
         "name": "photo_url",
@@ -9224,7 +9224,7 @@ export const METHODS = [
         "name": "payload",
         "typesLabel": "String",
         "required": true,
-        "description": "Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use it for your internal processes."
+        "description": "Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user; use it for your internal processes."
       },
       {
         "name": "provider_token",
@@ -9248,25 +9248,25 @@ export const METHODS = [
         "name": "subscription_period",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The number of seconds the subscription will be active for before the next payment. The currency must be set to \"XTR\" (Telegram Stars) if the parameter is used. Currently, it must always be 2592000 (30 days) if specified. Any number of subscriptions can be active for a given bot at the same time, including multiple concurrent subscriptions from the same user. Subscription price must no exceed 10000 Telegram Stars."
+        "description": "The number of seconds the subscription will be active for before the next payment. The currency must be set to \"XTR\" (Telegram Stars) if the parameter is used. Currently, it must always be 2592000 (30 days) if specified. Any number of subscriptions can be active for a given bot at the same time, including multiple concurrent subscriptions from the same user. Subscription price must not exceed 10000 Telegram Stars."
       },
       {
         "name": "max_tip_amount",
         "typesLabel": "Integer",
         "required": false,
-        "description": "The maximum accepted amount for tips in the smallest units of the currency (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in currencies.json, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0. Not supported for payments in Telegram Stars."
+        "description": "The maximum accepted amount for tips in the smallest units of the currency (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass max_tip_amount = 145. See the exp parameter in currencies.json; it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0. Not supported for payments in Telegram Stars."
       },
       {
         "name": "suggested_tip_amounts",
         "typesLabel": "Array of Integer",
         "required": false,
-        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed max_tip_amount."
+        "description": "A JSON-serialized Array of suggested amounts of tips in the smallest units of the currency (integer, not float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increasing order and must not exceed max_tip_amount."
       },
       {
         "name": "provider_data",
         "typesLabel": "String",
         "required": false,
-        "description": "JSON-serialized data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider."
+        "description": "JSON-serialized data about the invoice, which will be shared with the payment provider. A detailed description of the required fields should be provided by the payment provider."
       },
       {
         "name": "photo_url",
@@ -9396,7 +9396,7 @@ export const METHODS = [
         "name": "error_message",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if ok is False. Error message in human readable form that explains why it is impossible to complete the order (e.g. \"Sorry, delivery to your desired address is unavailable\"). Telegram will display this message to the user."
+        "description": "Required if ok is False. Error message in human-readable form that explains why it is impossible to complete the order (e.g. \"Sorry, delivery to your desired address is unavailable\"). Telegram will display this message to the user."
       }
     ],
     "jsonRequired": {
@@ -9433,7 +9433,7 @@ export const METHODS = [
         "name": "error_message",
         "typesLabel": "String",
         "required": false,
-        "description": "Required if ok is False. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. \"Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!\"). Telegram will display this message to the user."
+        "description": "Required if ok is False. Error message in human-readable form that explains the reason for failure to proceed with the checkout (e.g. \"Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!\"). Telegram will display this message to the user."
       }
     ],
     "jsonRequired": {
@@ -9552,7 +9552,7 @@ export const METHODS = [
   {
     "name": "setPassportDataErrors",
     "href": "https://core.telegram.org/bots/api#setpassportdataerrors",
-    "description": "Informs a user that some of the Telegram Passport elements they provided contains errors. The user will not be able to re-submit their Passport to you until the errors are fixed (the contents of the field for which you returned the error must change). Returns True on success.\nUse this if the data submitted by the user doesn't satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.",
+    "description": "Informs a user that some of the Telegram Passport elements they provided contain errors. The user will not be able to re-submit their Passport to you until the errors are fixed (the contents of the field for which you returned the error must change). Returns True on success.\nUse this if the data submitted by the user doesn't satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.",
     "returns": "Boolean",
     "params": [
       {
@@ -9666,7 +9666,7 @@ export const METHODS = [
   {
     "name": "setGameScore",
     "href": "https://core.telegram.org/bots/api#setgamescore",
-    "description": "Use this method to set the score of the specified user in a game message. On success, if the message is not an inline message, the Message is returned, otherwise True is returned. Returns an error, if the new score is not greater than the user's current score in the chat and force is False.",
+    "description": "Use this method to set the score of the specified user in a game message. On success, if the message is not an inline message, the Message is returned; otherwise, True is returned. Returns an error if the new score is not greater than the user's current score in the chat and force is False.",
     "returns": "Message, Boolean",
     "params": [
       {
